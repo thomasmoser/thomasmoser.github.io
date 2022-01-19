@@ -9,6 +9,16 @@ module.exports = {
     filename: "main.bundle.js",
   },
   mode: "development",
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname),
+    },
+    historyApiFallback: {
+      rewrites: [{ from: /^\/$/, to: "/views/landing.html" }],
+    },
+    compress: true,
+    port: 8080,
+  },
   module: {
     rules: [
       {
