@@ -1,0 +1,1 @@
+*,*::before,*::after{-webkit-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;vertical-align:baseline;font-family:var(--ff-main),sans-serif;color:var(--text-main-clr-400)}body{height:100vh}.scroll-content{will-change:transform}a{text-decoration:none;cursor:pointer}.box{height:200px;width:200px;background:black;margin:10rem auto}.red{background:red}
