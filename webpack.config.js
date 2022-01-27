@@ -2,20 +2,25 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    app: "./assets/js/app.js",
+    js: "./assets/js/app.js",
   },
   output: {
     path: path.resolve(__dirname, "./assets/js/build"),
     filename: "main.bundle.js",
+    //publicPath: "/",
   },
+  watch: true,
   mode: "development",
+
   devServer: {
-    static: {
-      directory: path.resolve(__dirname),
-    },
-    historyApiFallback: {
-      rewrites: [{ from: /^\/$/, to: "/views/landing.html" }],
-    },
+    static: [
+      {
+        directory: path.resolve(__dirname),
+      },
+      {
+        directory: path.resolve(__dirname, "./assets/css/"),
+      },
+    ],
     compress: true,
     port: 8080,
   },

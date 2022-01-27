@@ -11,19 +11,70 @@
       content="Graduate (M.Sc.) from the University of Mannheim with a focus on Finance"
     />
   </head>
-  <body id="scroll-container">
-    <section>
-      <h1>Home</h1>
-      <a href="./contact">Contact</a>
-      <div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-      </div>
-    </section>
-
+  <body>
+    <div data-scroll-container id="site-wrapper">
+      <header data-scroll-section>
+        <nav>
+          <div id="journal-desc">
+            <span>The Review of my Studies</span><span class="circle-break"> &#9679; </span
+            ><span>Vol. 1, No. 25</span><span class="circle-break"> &#9679; </span
+            ><span>January 2022</span>
+          </div>
+          <ul id="nav-links">
+            <li class="nav-link">
+              <a href="#">
+                <span class="nav-number">I.</span>
+                <span class="nav-text">Bio</span><span class="nav-reveal">.....2</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="#">
+                <span class="nav-number">II.</span> <span class="nav-text">Contact</span
+                ><span class="nav-reveal">.....5</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section data-scroll-section class="section-page" id="section-hero">
+          <div id="hero-header-container">
+            <h1 id="hero-header">Of Numbers and their Meaning</h1>
+            <div class="backlight"></div>
+          </div>
+          <h2 class="comp-header hero author">Thomas Moser</h2>
+          <div class="page-break"></div>
+          <h3 class="comp-header hero abstract">Abstract</h3>
+          <p class="hero">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </section>
+        <section data-scroll-section class="section-page" id="section-edu">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia consequuntur facilis
+            cum doloremque nam nemo culpa at totam cupiditate eaque cumque consectetur, nulla animi
+            quod quibusdam recusandae! Dolore, cumque delectus.
+          </p>
+        </section>
+        <section data-scroll-section class="section-page" id="section-exp">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia consequuntur facilis
+            cum doloremque nam nemo culpa at totam cupiditate eaque cumque consectetur, nulla animi
+            quod quibusdam recusandae! Dolore, cumque delectus.
+          </p>
+        </section>
+        <section data-scroll-section class="section-page" id="section-pro">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia consequuntur facilis
+            cum doloremque nam nemo culpa at totam cupiditate eaque cumque consectetur, nulla animi
+            quod quibusdam recusandae! Dolore, cumque delectus.
+          </p>
+        </section>
+      </main>
+      <footer></footer>
+    </div>
     <script src="./assets/js/build/main.bundle.js"></script>
   </body>
 </html>
