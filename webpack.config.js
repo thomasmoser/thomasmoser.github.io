@@ -9,7 +9,6 @@ module.exports = {
     filename: "main.bundle.js",
     //publicPath: "/",
   },
-  watch: true,
   mode: "development",
 
   devServer: {
