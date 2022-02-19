@@ -16,7 +16,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var locomotive_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! locomotive-scroll */ \"./node_modules/locomotive-scroll/dist/locomotive-scroll.esm.js\");\nconsole.log(\"hello\");\n\n\nvar imagesLoaded = __webpack_require__(/*! imagesloaded */ \"./node_modules/imagesloaded/imagesloaded.js\");\n\nvar scrollContainer = document.querySelector(\"[data-scroll-container]\");\nvar scroll = new locomotive_scroll__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n  el: scrollContainer,\n  smooth: true\n});\nimagesLoaded(scrollContainer, {\n  background: true\n}, function () {\n  scroll.update();\n});\n\n//# sourceURL=webpack://portfolio/./assets/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var locomotive_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! locomotive-scroll */ \"./node_modules/locomotive-scroll/dist/locomotive-scroll.esm.js\");\n\n\nvar imagesLoaded = __webpack_require__(/*! imagesloaded */ \"./node_modules/imagesloaded/imagesloaded.js\");\n\nvar scrollContainer = document.querySelector(\"[data-scroll-container]\");\nvar scroll = new locomotive_scroll__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n  el: scrollContainer,\n  smooth: true,\n  lerp: 0.05\n});\nimagesLoaded(scrollContainer, {\n  background: true\n}, function () {\n  scroll.update();\n});\nconsole.log(\"hello\");\n\n//# sourceURL=webpack://portfolio/./assets/js/app.js?");
 
 /***/ }),
 
