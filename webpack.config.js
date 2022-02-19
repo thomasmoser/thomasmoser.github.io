@@ -2,26 +2,20 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    js: "./assets/js/app.js",
+    app: "./assets/js/app.js",
   },
   output: {
-    path: path.resolve(__dirname, "./assets/js/build"),
     filename: "main.bundle.js",
+    path: path.resolve(__dirname, "./assets/js/build"),
     //publicPath: "/",
   },
   mode: "development",
 
   devServer: {
-    static: [
-      {
-        directory: path.resolve(__dirname),
-      },
-      {
-        directory: path.resolve(__dirname, "./assets/css/"),
-      },
-    ],
+    static: path.resolve(__dirname, "./"),
     compress: true,
     port: 8080,
+    hot: true,
   },
   module: {
     rules: [

@@ -12,9 +12,9 @@
     />
   </head>
   <body>
-    <div data-scroll-container>
-      <div id="site-wrapper">
-        <header data-scroll-section>
+    <div data-scroll-container id="site-wrapper">
+      <div id="site-wrapper-inner">
+        <header>
           <nav>
             <div class="journal-desc nav">
               <span>The Review of my Studies</span><span class="circle-break"> &#9679; </span
@@ -36,12 +36,12 @@
                     <span class="nav-reveal-wrapper"
                       ><span class="nav-reveal" style="--index: 2">.</span>
                     </span>
-                    <span class="nav-reveal-wrapper"
-                      ><span class="nav-reveal" style="--index: 3">.</span>
-                    </span>
-                    <span class="nav-reveal-wrapper"
-                      ><span class="nav-reveal" style="--index: 4">.</span>
-                    </span>
+                    <!-- <span class="nav-reveal-wrapper"
+                    ><span class="nav-reveal" style="--index: 3">.</span>
+                  </span>
+                  <span class="nav-reveal-wrapper"
+                    ><span class="nav-reveal" style="--index: 4">.</span>
+                  </span> -->
                     <span class="nav-reveal-wrapper"
                       ><span class="nav-reveal" style="--index: 5">2</span>
                     </span>
@@ -62,12 +62,12 @@
                     <span class="nav-reveal-wrapper"
                       ><span class="nav-reveal" style="--index: 2">.</span>
                     </span>
-                    <span class="nav-reveal-wrapper"
-                      ><span class="nav-reveal" style="--index: 3">.</span>
-                    </span>
-                    <span class="nav-reveal-wrapper"
-                      ><span class="nav-reveal" style="--index: 4">.</span>
-                    </span>
+                    <!-- <span class="nav-reveal-wrapper"
+                    ><span class="nav-reveal" style="--index: 3">.</span>
+                  </span>
+                  <span class="nav-reveal-wrapper"
+                    ><span class="nav-reveal" style="--index: 4">.</span>
+                  </span> -->
                     <span class="nav-reveal-wrapper"
                       ><span class="nav-reveal" style="--index: 5">5</span>
                     </span>
@@ -78,10 +78,11 @@
           </nav>
         </header>
         <main>
-          <section data-scroll-section class="section-page" id="section-hero">
+          <section class="section-page" id="section-hero">
+            <div class="backlight"></div>
+
             <div id="hero-header-container">
               <h1 id="hero-header">Of Numbers and their Meaning</h1>
-              <div class="backlight"></div>
             </div>
             <h2 class="comp-header hero author">Thomas Moser</h2>
             <div class="page-break"></div>
@@ -92,7 +93,7 @@
               exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
           </section>
-          <section data-scroll-section class="section-page" id="section-edu">
+          <section class="section-page" id="section-edu">
             <div class="page-break category"></div>
             <div class="journal-desc category">
               <span>The Review of my Studies</span><span class="circle-break"> &#9679; </span
@@ -100,83 +101,352 @@
             </div>
             <h2 class="wtm-category">Education</h2>
             <div id="edu-tl-container">
-              <div class="tl-point">
+              <div class="tl-point gen-point">
                 <h3 class="tl-header">Abitur (A Levels)</h3>
-                <span class="tl-subheader">Nienburg/Weser, Germany</span>
+                <p class="gen-subheader tl-subheader">Nienburg/Weser, Germany</p>
                 <ul class="tl-entries-container">
                   <li class="tl-entry">
                     <div class="tl-marker-container">
                       <div></div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    <p class="gen-detail">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                   </li>
                 </ul>
               </div>
-              <div class="tl-point">
+              <div class="tl-point gen-point">
                 <h3 class="tl-header">Bachelor of Science</h3>
-                <span class="tl-subheader">University of Mannheim, Germany</span>
+                <p class="gen-subheader tl-subheader">University of Mannheim, Germany</p>
                 <ul class="tl-entries-container">
                   <li class="tl-entry">
                     <div class="tl-marker-container">
                       <div></div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    <p class="gen-detail">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                   </li>
                   <li class="tl-entry">
                     <div class="tl-marker-container">
                       <div></div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    <p class="gen-detail">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                   </li>
                 </ul>
                 <div class="tl-img-container">
                   <img
                     id="img-edin"
-                    src="./assets/media/univ_edin.png"
+                    src="./assets/media/education/univ_edin_small.webp"
                     alt="Exchange Semester University of Edinburgh"
                   />
                 </div>
               </div>
-              <div class="tl-point">
+              <div class="tl-point gen-point">
                 <h3 class="tl-header">Master of Science</h3>
-                <span class="tl-subheader">University of Mannheim, Germany</span>
+                <p class="gen-subheader tl-subheader">University of Mannheim, Germany</p>
+
                 <ul class="tl-entries-container">
                   <li class="tl-entry">
                     <div class="tl-marker-container">
                       <div></div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    <p class="gen-detail">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                   </li>
                 </ul>
                 <div class="tl-img-container">
                   <img
                     id="img-mann"
-                    src="./assets/media/univ_mann.png"
+                    src="./assets/media/education/univ_mann_small.webp"
                     alt="University of Mannheim"
                   />
                 </div>
               </div>
             </div>
           </section>
-          <section data-scroll-section class="section-page" id="section-exp">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia consequuntur facilis
-              cum doloremque nam nemo culpa at totam cupiditate eaque cumque consectetur, nulla
-              animi quod quibusdam recusandae! Dolore, cumque delectus.
-            </p>
+          <section class="section-page" id="section-exp">
+            <div class="page-break category"></div>
+            <div class="journal-desc category">
+              <span>The Review of my Studies</span><span class="circle-break"> &#9679; </span
+              ><span>Page 3</span>
+            </div>
+            <h2 class="wtm-category">Experience</h2>
+            <div class="exp-point gen-point" id="research">
+              <div class="exp-point-general gen-point">
+                <h3 class="exp-point-header">Research Assistant</h3>
+                <p class="gen-subheader">Chair of International Finance</p>
+                <p class="gen-subheader">University of Mannheim</p>
+              </div>
+              <div class="exp-point-detail">
+                <p class="gen-detail">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation.
+                </p>
+              </div>
+            </div>
+            <div class="exp-point gen-point" id="cons">
+              <div class="exp-point-general">
+                <h3 class="exp-point-header">Consultant</h3>
+                <p class="gen-subheader">Finance and Risk</p>
+                <p class="gen-subheader">zeb - Strategy & Management Consulting</p>
+              </div>
+              <div class="exp-point-detail">
+                <p class="gen-detail">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation.
+                </p>
+              </div>
+            </div>
           </section>
-          <section data-scroll-section class="section-page" id="section-pro">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia consequuntur facilis
-              cum doloremque nam nemo culpa at totam cupiditate eaque cumque consectetur, nulla
-              animi quod quibusdam recusandae! Dolore, cumque delectus.
-            </p>
+          <section class="section-page" id="section-pro">
+            <div class="page-break category"></div>
+            <div class="journal-desc category">
+              <span>The Review of my Studies</span><span class="circle-break"> &#9679; </span
+              ><span>Page 4</span>
+            </div>
+            <h2 class="appendix-category">Appendix Projects</h2>
+            <div class="projects-grid-wrapper">
+              <div class="grid-row">
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+                <div class="grid-element">
+                  <div class="el-pro">Projects</div>
+                  <div class="el-app">Appendix</div>
+                </div>
+              </div>
+            </div>
+            <div class="project-wrapper gen-point" id="esports-wrapper">
+              <div class="project-info">
+                <h3>Data Analysis - Esports</h3>
+                <p class="gen-detail">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et
+                </p>
+                <div class="project-info-code">
+                  <div class="code-icon">
+                    <svg viewBox="0 0 42 43" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M16.45 29.55L8.4 21.5L16.45 13.45L14 11L3.5 21.5L14 32L16.45 29.55ZM25.55 29.55L33.6 21.5L25.55 13.45L28 11L38.5 21.5L28 32L25.55 29.55Z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="code-text">Python</div>
+                  <div class="code-circle"></div>
+                  <div class="code-text">Excel</div>
+                  <div class="code-circle"></div>
+                  <div class="code-text">Stata</div>
+                  <div class="code-circle"></div>
+                  <div class="code-text">HTML</div>
+                </div>
+                <div class="project-info-links">
+                  <a class="project-info-link" id="reddit" href="#">
+                    <svg viewBox="0 0 35 31" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.8823 8.63597L17.0243 3.25892C17.1075 2.86818 17.2667 2.49765 17.4931 2.16848C17.7194 1.83931 18.0084 1.55795 18.3435 1.34048C18.6786 1.12301 19.0532 0.973694 19.4461 0.90105C19.8389 0.828406 20.2422 0.833862 20.6329 0.917106L25.4929 1.95115C25.9409 1.45363 26.5406 1.11784 27.1989 0.995868C27.8572 0.873899 28.5374 0.972568 29.1339 1.27657C29.7304 1.58057 30.2099 2.07292 30.4981 2.67724C30.7863 3.28157 30.867 3.96409 30.7277 4.61896C30.5884 5.27383 30.237 5.86445 29.7278 6.29919C29.2186 6.73394 28.5803 6.98853 27.9116 7.02346C27.243 7.0584 26.5816 6.87174 26.0299 6.49242C25.4782 6.11311 25.0671 5.56235 24.8603 4.92556L20.0003 3.89151L18.9875 8.65878C21.7004 8.86711 24.3965 9.76886 26.8387 11.2439C27.5644 10.8404 28.3815 10.6298 29.2118 10.6323C30.0422 10.6347 30.858 10.8502 31.5813 11.258C32.3046 11.6658 32.9112 12.2523 33.3431 12.9615C33.775 13.6707 34.0177 14.4788 34.0481 15.3086V15.3405C34.0598 16.0843 33.9003 16.8208 33.5821 17.4932C33.2638 18.1655 32.7953 18.7557 32.2127 19.2182C32.21 19.2807 32.2059 19.343 32.2005 19.4053C32.2005 25.4849 25.4336 30.0955 17.2996 30.0955C9.19144 30.0955 2.53704 25.497 2.5416 19.5224C2.53497 19.4307 2.5299 19.3389 2.52639 19.2471C1.54423 18.5099 0.878006 17.4278 0.661996 16.2189C0.445987 15.01 0.696245 13.7641 1.36234 12.7324C2.02843 11.7006 3.06084 10.9597 4.25151 10.659C5.44218 10.3582 6.7026 10.5199 7.77875 11.1116C10.2348 9.63145 13.0185 8.78104 15.8823 8.63597ZM30.0032 17.0391C30.6236 16.7304 31.0129 16.0963 31.0083 15.4044C30.9925 15.0565 30.8768 14.7205 30.675 14.4366C30.4732 14.1527 30.1939 13.933 29.8705 13.8037C29.5471 13.6744 29.1933 13.641 28.8514 13.7075C28.5095 13.774 28.194 13.9376 27.9427 14.1788L27.0531 15.0303L26.0342 14.3384C23.5784 12.6688 20.7849 11.7153 18.0812 11.656H16.5514C13.7002 11.7001 10.9995 12.5684 8.58774 14.2031L7.57954 14.8874L6.69148 14.051C6.49997 13.8713 6.27168 13.7353 6.02241 13.6525C5.77314 13.5697 5.50886 13.542 5.24785 13.5714C4.98685 13.6009 4.73535 13.6867 4.51079 13.8229C4.28622 13.9591 4.09394 14.1426 3.94727 14.3604C3.80059 14.5783 3.70302 14.8255 3.66131 15.0848C3.61961 15.3442 3.63476 15.6095 3.70572 15.8623C3.77668 16.1152 3.90175 16.3497 4.07228 16.5495C4.24281 16.7492 4.45471 16.9096 4.69333 17.0194L5.65591 17.4603L5.57379 18.5172C5.55402 18.7757 5.55403 19.0327 5.57836 19.4053C5.57836 23.5263 10.6817 27.0542 17.2996 27.0542C23.9464 27.0542 29.1592 23.5019 29.1638 19.2897C29.1836 19.0326 29.1836 18.7743 29.1638 18.5172L29.0847 17.4953L30.0032 17.0391ZM9.6446 17.2809C9.6446 16.676 9.88491 16.0958 10.3127 15.668C10.7404 15.2402 11.3206 14.9999 11.9256 14.9999C12.5305 14.9999 13.1107 15.2402 13.5385 15.668C13.9663 16.0958 14.2066 16.676 14.2066 17.2809C14.2066 17.8859 13.9663 18.466 13.5385 18.8938C13.1107 19.3216 12.5305 19.5619 11.9256 19.5619C11.3206 19.5619 10.7404 19.3216 10.3127 18.8938C9.88491 18.466 9.6446 17.8859 9.6446 17.2809ZM20.2892 17.2809C20.2892 16.676 20.5295 16.0958 20.9573 15.668C21.3851 15.2402 21.9652 14.9999 22.5702 14.9999C23.1751 14.9999 23.7553 15.2402 24.1831 15.668C24.6109 16.0958 24.8512 16.676 24.8512 17.2809C24.8512 17.8859 24.6109 18.466 24.1831 18.8938C23.7553 19.3216 23.1751 19.5619 22.5702 19.5619C21.9652 19.5619 21.3851 19.3216 20.9573 18.8938C20.5295 18.466 20.2892 17.8859 20.2892 17.2809ZM17.2722 25.0408C15.1479 25.0408 13.0646 24.4782 11.369 23.2008C11.2666 23.0772 11.214 22.9198 11.2215 22.7594C11.229 22.599 11.2961 22.4472 11.4097 22.3336C11.5232 22.2201 11.675 22.153 11.8354 22.1455C11.9958 22.138 12.1532 22.1906 12.2769 22.293C13.7139 23.3468 15.5052 23.7984 17.2479 23.7984C18.9906 23.7984 20.791 23.3803 22.2417 22.3401C22.3256 22.2583 22.4296 22.2 22.5432 22.1711C22.6567 22.1421 22.7759 22.1436 22.8887 22.1754C23.0016 22.2071 23.104 22.268 23.1858 22.3519C23.2677 22.4358 23.326 22.5398 23.3549 22.6534C23.3795 22.7672 23.3759 22.8854 23.3444 22.9975C23.3128 23.1096 23.2543 23.2123 23.1739 23.2966C22.1338 24.5086 19.3966 25.0408 17.2722 25.0408Z"
+                      />
+                    </svg>
+                  </a>
+                  <a class="project-info-link" href="#">
+                    <svg viewBox="0 0 35 26" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M35 12.8904C35 12.8042 35 12.7062 34.9961 12.5926C34.9922 12.2752 34.9845 11.9186 34.9767 11.5385C34.9456 10.4453 34.8913 9.35596 34.8058 8.32932C34.6893 6.91476 34.5184 5.7353 34.2854 4.84973C34.0395 3.92556 33.5575 3.08269 32.8875 2.40538C32.2176 1.72806 31.3832 1.24002 30.4677 0.99004C29.3686 0.692237 27.217 0.508069 24.1877 0.394434C22.7468 0.339575 21.205 0.304309 19.6631 0.284717C19.1233 0.27688 18.6223 0.272961 18.1718 0.269043H17.0299C16.5794 0.272961 16.0784 0.27688 15.5386 0.284717C13.9967 0.304309 12.4549 0.339575 11.014 0.394434C7.98471 0.511988 5.82923 0.696155 4.73402 0.99004C3.81823 1.23941 2.9835 1.72724 2.31345 2.40465C1.64341 3.08206 1.1616 3.92525 0.916299 4.84973C0.679391 5.7353 0.51239 6.91476 0.395878 8.32932C0.310435 9.35596 0.256063 10.4453 0.224993 11.5385C0.213342 11.9186 0.209458 12.2752 0.205574 12.5926C0.205574 12.7062 0.201691 12.8042 0.201691 12.8904V13.1098C0.201691 13.1961 0.201691 13.294 0.205574 13.4077C0.209458 13.7251 0.217226 14.0816 0.224993 14.4617C0.256063 15.555 0.310435 16.6443 0.395878 17.6709C0.51239 19.0855 0.683275 20.265 0.916299 21.1505C1.41342 23.0275 2.8737 24.5087 4.73402 25.0102C5.82923 25.308 7.98471 25.4922 11.014 25.6058C12.4549 25.6607 13.9967 25.696 15.5386 25.7156C16.0784 25.7234 16.5794 25.7273 17.0299 25.7312H18.1718C18.6223 25.7273 19.1233 25.7234 19.6631 25.7156C21.205 25.696 22.7468 25.6607 24.1877 25.6058C27.217 25.4883 29.3725 25.3041 30.4677 25.0102C32.328 24.5087 33.7883 23.0314 34.2854 21.1505C34.5223 20.265 34.6893 19.0855 34.8058 17.6709C34.8913 16.6443 34.9456 15.555 34.9767 14.4617C34.9884 14.0816 34.9922 13.7251 34.9961 13.4077C34.9961 13.294 35 13.1961 35 13.1098V12.8904ZM32.2037 13.0942C32.2037 13.1765 32.2037 13.2666 32.1998 13.3724C32.1959 13.678 32.1882 14.015 32.1804 14.3794C32.1532 15.4217 32.0989 16.4641 32.0173 17.4319C31.9124 18.6937 31.7649 19.7281 31.5823 20.4217C31.3415 21.3269 30.6347 22.044 29.7414 22.283C28.9258 22.5024 26.8713 22.6787 24.0789 22.7845C22.6652 22.8394 21.1428 22.8747 19.6243 22.8943C19.0922 22.9021 18.599 22.906 18.1562 22.906H17.0455L15.5774 22.8943C14.0589 22.8747 12.5403 22.8394 11.1228 22.7845C8.33036 22.6748 6.27198 22.5024 5.46028 22.283C4.56702 22.04 3.86017 21.3269 3.61938 20.4217C3.43685 19.7281 3.28926 18.6937 3.1844 17.4319C3.10285 16.4641 3.05236 15.4217 3.02129 14.3794C3.00964 14.015 3.00575 13.6741 3.00187 13.3724C3.00187 13.2666 2.99798 13.1725 2.99798 13.0942V12.9061C2.99798 12.8238 2.99798 12.7337 3.00187 12.6279C3.00575 12.3222 3.01352 11.9853 3.02129 11.6208C3.04847 10.5785 3.10285 9.53621 3.1844 8.56835C3.28926 7.3066 3.43685 6.27213 3.61938 5.57856C3.86017 4.6734 4.56702 3.95632 5.46028 3.71729C6.27586 3.49786 8.33036 3.32153 11.1228 3.21573C12.5365 3.16087 14.0589 3.1256 15.5774 3.10601C16.1095 3.09817 16.6027 3.09426 17.0455 3.09426H18.1562L19.6243 3.10601C21.1428 3.1256 22.6614 3.16087 24.0789 3.21573C26.8713 3.32544 28.9297 3.49786 29.7414 3.71729C30.6347 3.96024 31.3415 4.6734 31.5823 5.57856C31.7649 6.27213 31.9124 7.3066 32.0173 8.56835C32.0989 9.53621 32.1493 10.5785 32.1804 11.6208C32.1921 11.9853 32.1959 12.3262 32.1998 12.6279C32.1998 12.7337 32.2037 12.8277 32.2037 12.9061V13.0942ZM14.1443 18.2509L23.1546 12.9609L14.1443 7.74939V18.2509Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="project-img-wrapper" id="img-esports-wrapper">
+                <div class="vignette"></div>
+                <div class="img-row-wrapper">
+                  <div class="img-row">
+                    <div class="img-wrapper">
+                      <img
+                        src="./assets/media/esports/pink-bar.png"
+                        alt="Pink downward sloping graph"
+                      />
+                    </div>
+                    <div class="img-wrapper">
+                      <img
+                        src="./assets/media/esports/pink-trend.png"
+                        alt="Hero section of bejour website"
+                      />
+                    </div>
+                  </div>
+                  <div class="img-row">
+                    <div class="img-wrapper">
+                      <img
+                        src="./assets/media/esports/blue-dot.png"
+                        alt="Dashboard of bejour website"
+                      />
+                    </div>
+                    <div class="img-wrapper">
+                      <img
+                        src="./assets/media/esports/violet-bar.png"
+                        alt="Progress graph of bejour website"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-wrapper gen-point" id="bejour-wrapper">
+              <div class="project-info">
+                <h3>Web App - Behavioral Economics</h3>
+                <p class="gen-detail">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et
+                </p>
+                <div class="project-info-code">
+                  <div class="code-icon">
+                    <svg viewBox="0 0 42 43" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M16.45 29.55L8.4 21.5L16.45 13.45L14 11L3.5 21.5L14 32L16.45 29.55ZM25.55 29.55L33.6 21.5L25.55 13.45L28 11L38.5 21.5L28 32L25.55 29.55Z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="code-text">Python</div>
+                  <div class="code-circle"></div>
+                  <div class="code-text">JavaScript</div>
+                  <div class="code-circle"></div>
+                  <div class="code-text">HTML</div>
+                  <div class="code-circle"></div>
+                  <div class="code-text">NoSQL</div>
+                </div>
+                <div class="project-info-links">
+                  <a class="project-info-link" href="#">
+                    <svg viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="39" height="39" transform="translate(0 0.5)" fill="#170800" />
+                      <path
+                        d="M21.1251 5.375L26.4762 10.7261L15.1012 22.1011L17.3989 24.3989L28.7739 13.0239L34.1251 18.375V5.375H21.1251Z"
+                      />
+                      <path
+                        d="M30.875 31.375H8.125V8.625H19.5L16.25 5.375H8.125C6.33262 5.375 4.875 6.83262 4.875 8.625V31.375C4.875 33.1674 6.33262 34.625 8.125 34.625H30.875C32.6674 34.625 34.125 33.1674 34.125 31.375V23.25L30.875 20V31.375Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="project-img-wrapper" id="img-bejour-wrapper">
+                <div class="vignette"></div>
+                <div class="img-row-wrapper">
+                  <div class="img-row">
+                    <div class="img-wrapper">
+                      <img
+                        src="./assets/media/bejour/evidence.webp"
+                        alt="Pink downward sloping graph"
+                        id="evd-img"
+                      />
+                    </div>
+                    <div class="img-wrapper">
+                      <img
+                        src="./assets/media/bejour/hero.webp"
+                        alt="Hero section of bejour website"
+                        id="hero-img"
+                      />
+                    </div>
+                  </div>
+                  <div class="img-row">
+                    <div class="img-wrapper" id="dash-img">
+                      <img
+                        src="./assets/media/bejour/dash.webp"
+                        alt="Dashboard of bejour website"
+                        id="dash-img"
+                      />
+                    </div>
+                    <div class="img-wrapper">
+                      <img
+                        src="./assets/media/bejour/progress.webp"
+                        alt="Progress graph of bejour website"
+                        id="prog-img"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
         </main>
         <footer></footer>
       </div>
     </div>
-
     <script src="./assets/js/build/main.bundle.js"></script>
   </body>
 </html>
