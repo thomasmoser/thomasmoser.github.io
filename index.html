@@ -3,12 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="./assets/css/global.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <title>CV - Thomas Moser</title>
     <meta
       name="description"
-      content="Graduate (M.Sc.) from the University of Mannheim with a focus on Finance"
+      content="Consultant in Finance & Risk at zeb | Graduate (M.Sc.) from the University of Mannheim with a focus on Finance | Behavioral Finance"
     />
   </head>
   <body>
@@ -17,8 +25,8 @@
         <header>
           <nav>
             <div class="journal-desc nav">
-              <span>The Review of my Studies</span><span class="circle-break"> &#9679; </span
-              ><span>Vol. 1, No. 25</span><span class="circle-break"> &#9679; </span
+              <span>The Review of my Studies</span><span class="circle-break"></span
+              ><span>Vol. 1, No. 25</span><span class="circle-break"></span
               ><span>January 2022</span>
             </div>
             <ul id="nav-links">
@@ -96,40 +104,63 @@
           <section class="section-page" id="section-edu">
             <div class="page-break category"></div>
             <div class="journal-desc category">
-              <span>The Review of my Studies</span><span class="circle-break"> &#9679; </span
+              <span>The Review of my Studies</span><span class="circle-break"></span
               ><span>Page 2</span>
             </div>
             <h2 class="wtm-category">Education</h2>
             <div id="edu-tl-container">
+              <div class="tl-line"></div>
               <div class="tl-point gen-point">
-                <h3 class="tl-header">Abitur (A Levels)</h3>
-                <p class="gen-subheader tl-subheader">Nienburg/Weser, Germany</p>
-                <ul class="tl-entries-container">
-                  <li class="tl-entry">
+                <div class="tl-point-container">
+                  <div class="tl-point-bg"></div>
+                  <div class="tl-header-flex" id="tl-header-flex-abi">
                     <div class="tl-marker-container">
                       <div></div>
                     </div>
-                    <p class="gen-detail">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                  </li>
-                </ul>
+                    <div class="tl-header-container">
+                      <h3 class="tl-header">Abitur (A Levels)</h3>
+                      <p class="gen-subheader tl-subheader">Nienburg/Weser, Germany</p>
+                    </div>
+                  </div>
+                  <ul class="tl-entries-container">
+                    <li class="tl-entry">
+                      <p class="gen-detail">Scientific profile (Physics, Mathematics, Economics)</p>
+                    </li>
+                    <li class="tl-entry">
+                      <p class="gen-detail">Graduated top of class</p>
+                    </li>
+                    <li class="tl-entry">
+                      <p class="gen-detail">
+                        Graduation prize awarded by the German Physical Society
+                      </p>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div class="tl-point gen-point">
-                <h3 class="tl-header">Bachelor of Science</h3>
-                <p class="gen-subheader tl-subheader">University of Mannheim, Germany</p>
-                <ul class="tl-entries-container">
-                  <li class="tl-entry">
+                <div class="tl-point-container">
+                  <div class="tl-point-bg"></div>
+                  <div class="tl-header-flex">
                     <div class="tl-marker-container">
                       <div></div>
                     </div>
-                    <p class="gen-detail">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                  </li>
-                  <li class="tl-entry">
-                    <div class="tl-marker-container">
-                      <div></div>
+                    <div class="tl-header-container">
+                      <h3 class="tl-header">Bachelor of Science</h3>
+                      <p class="gen-subheader tl-subheader">University of Mannheim, Germany</p>
                     </div>
-                    <p class="gen-detail">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                  </li>
-                </ul>
+                  </div>
+                  <ul class="tl-entries-container">
+                    <li class="tl-entry">
+                      <p class="gen-detail">Top ranked undergraduate business degree in Germany</p>
+                    </li>
+                    <li class="tl-entry">
+                      <p class="gen-detail">Semester abroad at the University of Edinburgh, UK</p>
+                    </li>
+                    <li class="tl-entry">
+                      <p class="gen-detail">Graduated in the top 10%</p>
+                    </li>
+                  </ul>
+                </div>
                 <div class="tl-img-container">
                   <img
                     id="img-edin"
@@ -138,18 +169,28 @@
                   />
                 </div>
               </div>
-              <div class="tl-point gen-point">
-                <h3 class="tl-header">Master of Science</h3>
-                <p class="gen-subheader tl-subheader">University of Mannheim, Germany</p>
-
-                <ul class="tl-entries-container">
-                  <li class="tl-entry">
+              <div class="tl-point gen-point" id="tl-point-master">
+                <div class="tl-point-container">
+                  <div class="tl-point-bg"></div>
+                  <div class="tl-header-flex" id="tl-header-flex-master">
                     <div class="tl-marker-container">
                       <div></div>
                     </div>
-                    <p class="gen-detail">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                  </li>
-                </ul>
+                    <div class="tl-header-container">
+                      <h3 class="tl-header" id="tl-header-master">Master of Science</h3>
+                      <p class="gen-subheader tl-subheader">University of Mannheim, Germany</p>
+                    </div>
+                  </div>
+                  <ul class="tl-entries-container">
+                    <li class="tl-entry">
+                      <p class="gen-detail">Focus on Empirical Finance and Psychology</p>
+                    </li>
+                    <li class="tl-entry">
+                      <p class="gen-detail">Graduated with distinction</p>
+                    </li>
+                  </ul>
+                </div>
+
                 <div class="tl-img-container">
                   <img
                     id="img-mann"
@@ -163,7 +204,7 @@
           <section class="section-page" id="section-exp">
             <div class="page-break category"></div>
             <div class="journal-desc category">
-              <span>The Review of my Studies</span><span class="circle-break"> &#9679; </span
+              <span>The Review of my Studies</span><span class="circle-break"></span
               ><span>Page 3</span>
             </div>
             <h2 class="wtm-category">Experience</h2>
@@ -175,9 +216,13 @@
               </div>
               <div class="exp-point-detail">
                 <p class="gen-detail">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation.
+                  WHY: To pursue my interest in the interconnection of economics and psychology. A
+                  passion sparked by books like Thinking, Fast and Slow by Daniel Kahneman
+                </p>
+                <p class="gen-detail">
+                  WHAT: Collected, processed and analyzed financial market data. Actively supported
+                  research in the area of Behavioral Finance through critical feedback and
+                  literature reviews.
                 </p>
               </div>
             </div>
@@ -189,9 +234,13 @@
               </div>
               <div class="exp-point-detail">
                 <p class="gen-detail">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation.
+                  WHY: To round off my analytical skill set with intense bouts of cooperation and
+                  teamwork while embracing my love of learning new things.
+                </p>
+                <p class="gen-detail">
+                  WHAT: Conducted a gap analysis of key business processes inside a finance
+                  subsidiary of a DAX40(?) company. Built dynamic benchmarking reports for SME
+                  banks.
                 </p>
               </div>
             </div>
@@ -199,7 +248,7 @@
           <section class="section-page" id="section-pro">
             <div class="page-break category"></div>
             <div class="journal-desc category">
-              <span>The Review of my Studies</span><span class="circle-break"> &#9679; </span
+              <span>The Review of my Studies</span><span class="circle-break"></span
               ><span>Page 4</span>
             </div>
             <h2 class="appendix-category">Appendix Projects</h2>
@@ -297,8 +346,8 @@
               <div class="project-info">
                 <h3>Data Analysis - Esports</h3>
                 <p class="gen-detail">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et
+                  Scraped heterogenous data from multiple websites to conduct novel analyses of the
+                  matchmaking system behind a popular esport.
                 </p>
                 <div class="project-info-code">
                   <div class="code-icon">
@@ -371,8 +420,8 @@
               <div class="project-info">
                 <h3>Web App - Behavioral Economics</h3>
                 <p class="gen-detail">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et
+                  Combined my interest for Behavioral Economics with the desire to expand my
+                  technical skills.
                 </p>
                 <div class="project-info-code">
                   <div class="code-icon">
@@ -392,8 +441,13 @@
                 </div>
                 <div class="project-info-links">
                   <a class="project-info-link" href="#">
-                    <svg viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="39" height="39" transform="translate(0 0.5)" fill="#170800" />
+                    <svg
+                      viewBox="0 0 39 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="link-svg"
+                    >
+                      <rect transform="translate(0 0.5)" fill="#170800" />
                       <path
                         d="M21.1251 5.375L26.4762 10.7261L15.1012 22.1011L17.3989 24.3989L28.7739 13.0239L34.1251 18.375V5.375H21.1251Z"
                       />
@@ -443,8 +497,69 @@
               </div>
             </div>
           </section>
+          <section class="section-page" id="section-contact">
+            <div class="page-break category"></div>
+            <div class="journal-desc category">
+              <span>The Review of my Studies</span><span class="circle-break"></span
+              ><span>Page 5</span>
+            </div>
+            <h2 class="appendix-category">Contact</h2>
+
+            <div id="contact-wrapper">
+              <div id="quote-icon">
+                <svg viewBox="0 0 251 207" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M57.0485 82.5511C54.2582 82.5511 51.5804 83.0212 48.9152 83.4499C49.7786 80.2419 50.667 76.9786 52.0934 74.0471C53.5199 69.7882 55.7472 66.0962 57.9619 62.3765C59.8138 58.3527 63.0796 55.6287 65.4821 52.1856C67.9972 48.8393 71.4257 46.613 74.1409 43.8337C76.8061 40.9299 80.2972 39.478 83.075 37.4315C85.978 35.5924 88.5056 33.5597 91.2083 32.5918L97.9527 29.522L103.884 26.798L97.8151 0L90.3449 1.99118C87.955 2.6549 85.0395 3.42925 81.7237 4.35571C78.3327 5.04709 74.7165 6.94148 70.6874 8.66994C66.7084 10.6335 62.1037 11.9609 57.8243 15.1136C53.5199 18.1281 48.5523 20.6447 44.1729 24.6824C39.9311 28.8445 34.8133 32.4535 31.0345 37.7495C26.9053 42.6998 22.8261 47.899 19.6604 53.8172C15.9941 59.4589 13.5041 65.6537 10.8764 71.7794C8.49901 77.905 6.58455 84.1689 5.02046 90.2531C2.05494 102.449 0.728583 114.037 0.21556 123.951C-0.209873 133.879 0.0403818 142.134 0.565918 148.108C0.753609 150.929 1.10397 153.667 1.35422 155.561L1.66704 157.884L1.99237 157.801C4.2179 169.29 9.34116 179.847 16.7695 188.252C24.1978 196.657 33.6276 202.567 43.9682 205.297C54.3087 208.027 65.1373 207.466 75.2014 203.679C85.2656 199.892 94.1539 193.034 100.838 183.898C107.523 174.762 111.73 163.721 112.973 152.053C114.217 140.385 112.445 128.566 107.864 117.964C103.283 107.362 96.08 98.4095 87.0873 92.1426C78.0945 85.8757 67.68 82.5503 57.0485 82.5511ZM194.689 82.5511C191.898 82.5511 189.221 83.0212 186.556 83.4499C187.419 80.2419 188.307 76.9786 189.734 74.0471C191.16 69.7882 193.387 66.0962 195.602 62.3765C197.454 58.3527 200.72 55.6287 203.122 52.1856C205.637 48.8393 209.066 46.613 211.781 43.8337C214.446 40.9299 217.938 39.478 220.715 37.4315C223.618 35.5924 226.146 33.5597 228.849 32.5918L235.593 29.522L241.524 26.798L235.455 0L227.985 1.99118C225.595 2.6549 222.68 3.42925 219.364 4.35571C215.973 5.04709 212.357 6.94148 208.328 8.66994C204.361 10.6473 199.744 11.9609 195.465 15.1275C191.16 18.1419 186.193 20.6585 181.813 24.6962C177.571 28.8583 172.454 32.4673 168.675 37.7495C164.546 42.6998 160.466 47.899 157.301 53.8172C153.634 59.4589 151.144 65.6537 148.517 71.7794C146.139 77.905 144.225 84.1689 142.661 90.2531C139.695 102.449 138.369 114.037 137.856 123.951C137.43 133.879 137.681 142.134 138.206 148.108C138.394 150.929 138.744 153.667 138.995 155.561L139.307 157.884L139.633 157.801C141.858 169.29 146.981 179.847 154.41 188.252C161.838 196.657 171.268 202.567 181.608 205.297C191.949 208.027 202.778 207.466 212.842 203.679C222.906 199.892 231.794 193.034 238.479 183.898C245.163 174.762 249.37 163.721 250.614 152.053C251.857 140.385 250.086 128.566 245.505 117.964C240.924 107.362 233.72 98.4095 224.728 92.1426C215.735 85.8757 205.32 82.5503 194.689 82.5511Z"
+                  />
+                </svg>
+              </div>
+              <div class="contact-text-wrapper">
+                <div class="quote-text">
+                  To know even one life has breathed easier because you have lived, this is to have
+                  succeeded.
+                </div>
+                <div class="quote-author">Ralph Waldo Emerson</div>
+                <div class="contact-info-wrapper">
+                  <p class="gen-detail">So no matter the inquiry, feel free to contact me.</p>
+                  <div id="contact-icons">
+                    <div class="contact-icon">
+                      <svg
+                        viewBox="0 0 90 60"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="mail-icon"
+                      >
+                        <path
+                          d="M2.87001 6.43L40.37 26.575C41.63 27.25 43.26 27.57 44.9 27.57C46.54 27.57 48.17 27.25 49.43 26.575L86.93 6.43C89.375 5.115 91.685 0 87.2 0H2.60501C-1.87999 0 0.430008 5.115 2.87001 6.43ZM88.065 17.445L49.43 37.58C47.73 38.47 46.54 38.575 44.9 38.575C43.26 38.575 42.07 38.47 40.37 37.58C38.67 36.69 4.70501 18.885 1.93001 17.44C-0.0199918 16.42 8.08034e-06 17.615 8.08034e-06 18.535V55C8.08034e-06 57.1 2.83001 60 5.00001 60H85C87.17 60 90 57.1 90 55V18.54C90 17.62 90.02 16.425 88.065 17.445Z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="contact-icon">
+                      <svg
+                        viewBox="0 0 60 60"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="in-icon"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M7.41981e-07 5.01273C7.41981e-07 3.68328 0.528126 2.40827 1.46819 1.4682C2.40826 0.528132 3.68327 6.68267e-06 5.01273 6.68267e-06H54.9818C55.6407 -0.00106937 56.2932 0.127815 56.9022 0.379279C57.5112 0.630744 58.0645 0.999851 58.5307 1.46547C58.9968 1.93109 59.3665 2.48407 59.6186 3.09276C59.8708 3.70145 60.0004 4.35389 60 5.01273V54.9818C60.0007 55.6408 59.8715 56.2934 59.6197 56.9024C59.368 57.5114 58.9986 58.0648 58.5328 58.5308C58.0669 58.9969 57.5138 59.3666 56.9049 59.6187C56.2961 59.8708 55.6435 60.0004 54.9845 60H5.01273C4.35422 60 3.70216 59.8703 3.09381 59.6182C2.48546 59.3661 1.93274 58.9966 1.46723 58.5308C1.00172 58.0651 0.632542 57.5122 0.380789 56.9037C0.129036 56.2952 -0.000357533 55.6431 7.41981e-07 54.9845V5.01273ZM23.7491 22.8764H31.8736V26.9564C33.0464 24.6109 36.0464 22.5 40.5545 22.5C49.1973 22.5 51.2455 27.1718 51.2455 35.7436V51.6218H42.4991V37.6964C42.4991 32.8145 41.3264 30.06 38.3482 30.06C34.2164 30.06 32.4982 33.03 32.4982 37.6964V51.6218H23.7491V22.8764ZM8.74909 51.2482H17.4982V22.5H8.74909V51.2455V51.2482ZM18.75 13.1236C18.7665 13.8727 18.6332 14.6176 18.3579 15.3145C18.0827 16.0114 17.671 16.6463 17.147 17.1819C16.623 17.7175 15.9974 18.1431 15.3067 18.4337C14.616 18.7242 13.8743 18.8739 13.125 18.8739C12.3757 18.8739 11.634 18.7242 10.9433 18.4337C10.2526 18.1431 9.62697 17.7175 9.10301 17.1819C8.57904 16.6463 8.16734 16.0114 7.89207 15.3145C7.6168 14.6176 7.4835 13.8727 7.5 13.1236C7.53238 11.6532 8.13923 10.254 9.1906 9.22551C10.242 8.19705 11.6542 7.62114 13.125 7.62114C14.5958 7.62114 16.008 8.19705 17.0594 9.22551C18.1108 10.254 18.7176 11.6532 18.75 13.1236V13.1236Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </main>
-        <footer></footer>
+        <footer>
+          <div class="page-break" id="footer-break"></div>
+          <div class="footer-text-wrapper">
+            <p>Website design and implementation by me, hosted on Github Pages</p>
+          </div>
+        </footer>
       </div>
     </div>
     <script src="./assets/js/build/main.bundle.js"></script>

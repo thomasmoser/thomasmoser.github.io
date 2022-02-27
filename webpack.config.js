@@ -5,17 +5,14 @@ module.exports = {
     app: "./assets/js/app.js",
   },
   output: {
-    filename: "main.bundle.js",
     path: path.resolve(__dirname, "./assets/js/build"),
-    //publicPath: "/",
+    filename: "main.bundle.js",
   },
   mode: "development",
-
   devServer: {
-    static: path.resolve(__dirname, "./"),
-    compress: true,
-    port: 8080,
-    hot: true,
+    static: {
+      directory: path.resolve(__dirname),
+    },
   },
   module: {
     rules: [
