@@ -5,18 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="./assets/css/global.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
-    />
+    /> -->
     <title>CV - Thomas Moser</title>
     <meta
       name="description"
-      content="Consultant in Finance & Risk at zeb | Graduate (M.Sc.) from the University of Mannheim with a focus on Finance | Behavioral Finance"
+      content="Consultant in Finance & Risk at zeb | M.Sc. at University of Mannheim with a focus on Finance | Behavioral Finance"
     />
   </head>
   <body>
@@ -108,16 +107,16 @@
               ><span>Page 2</span>
             </div>
             <h2 class="wtm-category">Education</h2>
-            <div id="edu-tl-container">
+            <div id="edu-tl-container" class="text-after-wtm">
               <div class="tl-line"></div>
               <div class="tl-point gen-point">
                 <div class="tl-point-container">
-                  <div class="tl-point-bg"></div>
+                  <div class="tl-point-bg first"></div>
                   <div class="tl-header-flex" id="tl-header-flex-abi">
                     <div class="tl-marker-container">
                       <div></div>
                     </div>
-                    <div class="tl-header-container">
+                    <div class="tl-header-container first">
                       <h3 class="tl-header">Abitur (A Levels)</h3>
                       <p class="gen-subheader tl-subheader">Nienburg/Weser, Germany</p>
                     </div>
@@ -139,12 +138,12 @@
               </div>
               <div class="tl-point gen-point">
                 <div class="tl-point-container">
-                  <div class="tl-point-bg"></div>
+                  <div class="tl-point-bg second"></div>
                   <div class="tl-header-flex">
                     <div class="tl-marker-container">
                       <div></div>
                     </div>
-                    <div class="tl-header-container">
+                    <div class="tl-header-container second">
                       <h3 class="tl-header">Bachelor of Science</h3>
                       <p class="gen-subheader tl-subheader">University of Mannheim, Germany</p>
                     </div>
@@ -171,12 +170,12 @@
               </div>
               <div class="tl-point gen-point" id="tl-point-master">
                 <div class="tl-point-container">
-                  <div class="tl-point-bg"></div>
+                  <div class="tl-point-bg third"></div>
                   <div class="tl-header-flex" id="tl-header-flex-master">
                     <div class="tl-marker-container">
                       <div></div>
                     </div>
-                    <div class="tl-header-container">
+                    <div class="tl-header-container third">
                       <h3 class="tl-header" id="tl-header-master">Master of Science</h3>
                       <p class="gen-subheader tl-subheader">University of Mannheim, Germany</p>
                     </div>
@@ -191,7 +190,7 @@
                   </ul>
                 </div>
 
-                <div class="tl-img-container">
+                <div class="tl-img-container" id="tl-img-container-mann">
                   <img
                     id="img-mann"
                     src="./assets/media/education/univ_mann_small.webp"
@@ -208,40 +207,64 @@
               ><span>Page 3</span>
             </div>
             <h2 class="wtm-category">Experience</h2>
-            <div class="exp-point gen-point" id="research">
-              <div class="exp-point-general gen-point">
-                <h3 class="exp-point-header">Research Assistant</h3>
-                <p class="gen-subheader">Chair of International Finance</p>
-                <p class="gen-subheader">University of Mannheim</p>
+            <div id="exp-points" class="text-after-wtm">
+              <div class="exp-point gen-point" id="research">
+                <div class="exp-point-general gen-point">
+                  <h3 class="exp-point-header">Research Assistant</h3>
+                  <p class="gen-subheader">Chair of International Finance</p>
+                  <p class="gen-subheader">University of Mannheim</p>
+                </div>
+                <div class="exp-point-detail">
+                  <div class="exp-point-container">
+                    <div class="exp-point-header-container">
+                      <div>Why</div>
+                    </div>
+                    <p class="gen-detail">
+                      To pursue my interest in the connection of economics and psychology. A passion
+                      sparked by books like Thinking, Fast and Slow by Daniel Kahneman
+                    </p>
+                  </div>
+                  <div class="exp-point-detail-separator"></div>
+
+                  <div class="exp-point-container">
+                    <div class="exp-point-header-container">
+                      <div>What</div>
+                    </div>
+                    <p class="gen-detail">
+                      Collected, processed and analyzed financial market data. Actively supported
+                      research in the area of Behavioral Finance through critical feedback and
+                      literature reviews.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="exp-point-detail">
-                <p class="gen-detail">
-                  WHY: To pursue my interest in the interconnection of economics and psychology. A
-                  passion sparked by books like Thinking, Fast and Slow by Daniel Kahneman
-                </p>
-                <p class="gen-detail">
-                  WHAT: Collected, processed and analyzed financial market data. Actively supported
-                  research in the area of Behavioral Finance through critical feedback and
-                  literature reviews.
-                </p>
-              </div>
-            </div>
-            <div class="exp-point gen-point" id="cons">
-              <div class="exp-point-general">
-                <h3 class="exp-point-header">Consultant</h3>
-                <p class="gen-subheader">Finance and Risk</p>
-                <p class="gen-subheader">zeb - Strategy & Management Consulting</p>
-              </div>
-              <div class="exp-point-detail">
-                <p class="gen-detail">
-                  WHY: To round off my analytical skill set with intense bouts of cooperation and
-                  teamwork while embracing my love of learning new things.
-                </p>
-                <p class="gen-detail">
-                  WHAT: Conducted a gap analysis of key business processes inside a finance
-                  subsidiary of a DAX40(?) company. Built dynamic benchmarking reports for SME
-                  banks.
-                </p>
+              <div class="exp-point gen-point" id="cons">
+                <div class="exp-point-general">
+                  <h3 class="exp-point-header">Consultant</h3>
+                  <p class="gen-subheader">Finance and Risk</p>
+                  <p class="gen-subheader">zeb - Strategy & Management Consulting</p>
+                </div>
+                <div class="exp-point-detail">
+                  <div class="exp-point-container">
+                    <div class="exp-point-header-container">
+                      <div>Why</div>
+                    </div>
+                    <p class="gen-detail">
+                      To round off my analytical skill set with intense bouts of cooperation and
+                      teamwork while embracing my love of learning new things.
+                    </p>
+                  </div>
+                  <div class="exp-point-detail-separator"></div>
+                  <div class="exp-point-container">
+                    <div class="exp-point-header-container">
+                      <div>What</div>
+                    </div>
+                    <p class="gen-detail">
+                      Conducted a gap analysis of key business processes inside a finance subsidiary
+                      of a DAX40(?) company. Built dynamic benchmarking reports for SME banks.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -296,20 +319,6 @@
                   <div class="el-pro">Projects</div>
                   <div class="el-app">Appendix</div>
                 </div>
-              </div>
-              <div class="grid-row">
-                <div class="grid-element">
-                  <div class="el-pro">Projects</div>
-                  <div class="el-app">Appendix</div>
-                </div>
-                <div class="grid-element">
-                  <div class="el-pro">Projects</div>
-                  <div class="el-app">Appendix</div>
-                </div>
-                <div class="grid-element">
-                  <div class="el-pro">Projects</div>
-                  <div class="el-app">Appendix</div>
-                </div>
                 <div class="grid-element">
                   <div class="el-pro">Projects</div>
                   <div class="el-app">Appendix</div>
@@ -343,7 +352,7 @@
               </div>
             </div>
             <div class="project-wrapper gen-point" id="esports-wrapper">
-              <div class="project-info">
+              <div class="project-info" id="project-info-data">
                 <h3>Data Analysis - Esports</h3>
                 <p class="gen-detail">
                   Scraped heterogenous data from multiple websites to conduct novel analyses of the
@@ -383,7 +392,6 @@
                 </div>
               </div>
               <div class="project-img-wrapper" id="img-esports-wrapper">
-                <div class="vignette"></div>
                 <div class="img-row-wrapper">
                   <div class="img-row">
                     <div class="img-wrapper">
@@ -413,11 +421,12 @@
                       />
                     </div>
                   </div>
+                  <div class="vignette"></div>
                 </div>
               </div>
             </div>
             <div class="project-wrapper gen-point" id="bejour-wrapper">
-              <div class="project-info">
+              <div class="project-info" id="project-info-bejour">
                 <h3>Web App - Behavioral Economics</h3>
                 <p class="gen-detail">
                   Combined my interest for Behavioral Economics with the desire to expand my
@@ -459,7 +468,6 @@
                 </div>
               </div>
               <div class="project-img-wrapper" id="img-bejour-wrapper">
-                <div class="vignette"></div>
                 <div class="img-row-wrapper">
                   <div class="img-row">
                     <div class="img-wrapper">
@@ -493,6 +501,7 @@
                       />
                     </div>
                   </div>
+                  <div class="vignette"></div>
                 </div>
               </div>
             </div>
