@@ -22,6 +22,7 @@
     /* Modern Browsers */ url("../fonts/stix-two-text-v8-latin-regular.ttf") format("truetype"),
     /* Safari, Android, iOS */ url("../fonts/stix-two-text-v8-latin-regular.svg#STIXTwoText")
       format("svg"); /* Legacy iOS */
+  font-display: block;
 }
 /* stix-two-text-500 - latin */
 @font-face {
@@ -35,6 +36,7 @@
     /* Modern Browsers */ url("../fonts/stix-two-text-v8-latin-500.ttf") format("truetype"),
     /* Safari, Android, iOS */ url("../fonts/stix-two-text-v8-latin-500.svg#STIXTwoText")
       format("svg"); /* Legacy iOS */
+  font-display: block;
 }
 /* stix-two-text-700 - latin */
 @font-face {
@@ -48,6 +50,7 @@
     /* Modern Browsers */ url("../fonts/stix-two-text-v8-latin-700.ttf") format("truetype"),
     /* Safari, Android, iOS */ url("../fonts/stix-two-text-v8-latin-700.svg#STIXTwoText")
       format("svg"); /* Legacy iOS */
+  font-display: block;
 }
 /* stix-two-text-600 - latin */
 @font-face {
@@ -61,6 +64,7 @@
     /* Modern Browsers */ url("../fonts/stix-two-text-v8-latin-600.ttf") format("truetype"),
     /* Safari, Android, iOS */ url("../fonts/stix-two-text-v8-latin-600.svg#STIXTwoText")
       format("svg"); /* Legacy iOS */
+  font-display: block;
 }
 /* stix-two-text-italic - latin */
 @font-face {
@@ -75,6 +79,7 @@
     /* Modern Browsers */ url("../fonts/stix-two-text-v8-latin-italic.ttf") format("truetype"),
     /* Safari, Android, iOS */ url("../fonts/stix-two-text-v8-latin-italic.svg#STIXTwoText")
       format("svg"); /* Legacy iOS */
+  font-display: block;
 }
 :root {
   //layout
@@ -789,6 +794,7 @@ p.hero {
   height: fit-content;
   left: calc(-1 * (var(--site-margin) + 1.5vw));
   img {
+    width: 750px;
     max-width: Min(103vw, 600px);
     object-fit: cover;
     opacity: 0.15;
@@ -902,6 +908,7 @@ p.hero {
 #section-exp {
   h3 {
     width: fit-content;
+    font-size: Min(7.5vw, 40px);
   }
   .gen-detail {
     //font-size: 1.125rem;
@@ -955,6 +962,12 @@ p.hero {
   margin-top: 1.75rem;
 }
 
+@media screen and (max-width: 360px) {
+  .exp-point-header-container {
+    width: 80%;
+  }
+}
+
 @media screen and (min-width: 450px) {
   #exp-points {
     margin-left: auto;
@@ -968,8 +981,7 @@ p.hero {
 
 @media screen and (min-width: 650px) {
   .exp-point-container {
-    font-size: Min(3.7vw, 40px);
-    max-width: 30ch;
+    font-size: Min(7.5vw, 40px);
   }
   #research {
     margin-top: Min(calc((100vw - 650px) * 0.1), 350px);
@@ -1399,6 +1411,11 @@ p.hero {
     margin-top: 2rem;
     margin-bottom: 1.5rem;
   }
+
+  .code-circle {
+    width: 5px;
+    height: 5px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -1493,7 +1510,7 @@ p.hero {
   position: relative;
   //width: fit-content;
   margin: auto;
-  margin-top: 10rem;
+  margin: 10rem auto;
 }
 
 @media screen and (min-width: 400px) {
@@ -1509,9 +1526,9 @@ p.hero {
 #quote-icon {
   position: absolute;
   top: 0;
-  width: 100px;
-  height: 100px;
-  margin-top: -2.2rem;
+  width: 110px;
+  height: 110px;
+  margin-top: -2.7rem;
   //margin-left: calc(-1 * var(--site-margin));
   z-index: -1;
   svg {
@@ -1528,10 +1545,16 @@ p.hero {
 .quote-text {
   color: var(--clr-ff-first);
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   letter-spacing: 1px;
-  line-height: 2.5em;
+  line-height: 2em;
 }
+
+// @media screen and (max-width: 349px) {
+//   .contact-text-wrapper {
+//     max-width: 85vw;
+//   }
+// }
 
 .quote-author {
   text-transform: uppercase;
@@ -1617,12 +1640,16 @@ p.hero {
       height: 40px;
     }
   }
+
+  #contact-wrapper {
+    margin: 15rem auto;
+  }
 }
 
 //footer
 
 footer {
-  margin-top: 10rem;
+  //margin-top: 10rem;
   margin-bottom: 1rem;
   #footer-break {
     width: 100%;
