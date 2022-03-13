@@ -1,11 +1,14 @@
 import LocomotiveScroll from "locomotive-scroll";
-var imagesLoaded = require("imagesloaded");
+//var imagesLoaded = require("imagesloaded");
 
 let scrollContainer = document.querySelector("[data-scroll-container]");
 const scroll = new LocomotiveScroll({
   el: scrollContainer,
   smooth: true,
   lerp: 0.05,
+  gestureDirection: "vertical",
+  resetNativeScroll: false,
+  touchMultiplier: 1,
 });
 
 function SetLineHeight() {
@@ -17,9 +20,15 @@ function SetLineHeight() {
   tl_line.style.height = `${tl_line_height}px`;
 }
 
-SetLineHeight();
-imagesLoaded(scrollContainer, { background: true }, function () {
+// imagesLoaded(scrollContainer, { background: true }, function () {
+//   scroll.update();
+// });
+
+window.addEventListener("load", () => {
+  SetLineHeight();
   scroll.update();
 });
-
-window.onresize = SetLineHeight;
+window.onresize = () => {
+  SetLineHeight();
+  scroll.update();
+};
