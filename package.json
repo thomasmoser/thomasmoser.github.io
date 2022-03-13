@@ -28,7 +28,6 @@
     "webpack-dev-server": "^4.7.3"
   },
   "dependencies": {
-    "imagesloaded": "^4.1.4",
     "locomotive-scroll": "^4.1.3"
   }
 }
