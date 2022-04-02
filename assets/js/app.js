@@ -762,9 +762,9 @@ gsap.fromTo(
       scroller: scrollContainer,
       start: "top bottom",
       end: "bottom top",
-      scrub: true,
+      scrub: 1,
     },
-    xPercent: -2,
+    xPercent: -5,
   }
 );
 gsap.fromTo(
@@ -776,9 +776,9 @@ gsap.fromTo(
       scroller: scrollContainer,
       start: "top bottom",
       end: "bottom top",
-      scrub: true,
+      scrub: 1,
     },
-    xPercent: 2,
+    xPercent: 5,
   }
 );
 gsap.fromTo(
@@ -790,9 +790,9 @@ gsap.fromTo(
       scroller: scrollContainer,
       start: "top bottom",
       end: "bottom top",
-      scrub: true,
+      scrub: 1,
     },
-    xPercent: -2,
+    xPercent: -5,
   }
 );
 
