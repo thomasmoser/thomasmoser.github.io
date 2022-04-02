@@ -8,6 +8,7 @@ const scroll = new LocomotiveScroll({
   el: scrollContainer,
   smooth: true,
   lerp: 0.05,
+  multiplier: 0.8,
   gestureDirection: "vertical",
 });
 
@@ -144,6 +145,16 @@ tl_hero
     },
     `>-=${tl_hero_inc_delay}`
   )
+
+  .fromTo(
+    "#hero-header",
+    { opacity: 0 },
+    {
+      opacity: 1,
+      duration: 0.3,
+    },
+    `>-=${tl_hero_inc_delay + 0.4}`
+  )
   .fromTo(
     "#hero-header .rev",
     { opacity: 0, yPercent: 100 },
@@ -155,9 +166,9 @@ tl_hero
         amount: 0.5,
       },
     },
-    `>-=${tl_hero_inc_delay + 0.4}`
+    `<`
   )
-  .fromTo(".backlight", { opacity: 0 }, { opacity: 1, duration: 0.8 }, "<")
+  .fromTo(".backlight", { opacity: 0 }, { opacity: 1, duration: 2 }, "<")
   .fromTo(
     "#section-hero  .page-break",
     { scaleX: 0 },
@@ -166,7 +177,7 @@ tl_hero
       duration: `${tl_page_break_dur}`,
       ease: "Power1.easeInOut",
     },
-    `>-=${tl_hero_inc_delay}`
+    `>-=${tl_hero_inc_delay + 1.2}`
   )
   .fromTo(
     ".author.rev",
@@ -179,6 +190,14 @@ tl_hero
     `>-=${tl_hero_inc_delay + tl_page_break_dur}`
   )
   .fromTo(
+    "#abstract-text-id",
+    { opacity: 0 },
+    {
+      opacity: 1,
+    },
+    "<+=0.2"
+  )
+  .fromTo(
     ".abstract.rev",
     { opacity: 0, yPercent: 100 },
     {
@@ -186,7 +205,7 @@ tl_hero
       yPercent: 0,
       duration: 0.5,
     },
-    "<+=0.2"
+    "<"
   )
   .add(
     gsap
@@ -267,10 +286,10 @@ gsap.fromTo(
       trigger: "#section-edu .wtm-category",
       scroller: scrollContainer,
       start: "top center",
-      end: "bottom+=200 center",
+      end: "bottom+=350 center",
       scrub: 2,
     },
-    xPercent: -5,
+    xPercent: -10,
   }
 );
 
@@ -741,9 +760,9 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: "#section-pro .projects-grid-wrapper",
       scroller: scrollContainer,
-      start: "top center",
-      end: "bottom+=200 center",
-      scrub: 1,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true,
     },
     xPercent: -2,
   }
@@ -755,9 +774,9 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: "#section-pro .projects-grid-wrapper",
       scroller: scrollContainer,
-      start: "top center",
-      end: "bottom+=200 center",
-      scrub: 1,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true,
     },
     xPercent: 2,
   }
@@ -769,9 +788,9 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: "#section-pro .projects-grid-wrapper",
       scroller: scrollContainer,
-      start: "top center",
-      end: "bottom+=200 center",
-      scrub: 1,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true,
     },
     xPercent: -2,
   }
@@ -795,7 +814,7 @@ tl_pro_first
       yPercent: 0,
       duration: 0.8,
       stagger: {
-        amount: 0.3,
+        amount: 0.5,
       },
     },
     "<"
@@ -806,12 +825,12 @@ tl_pro_first
     {
       opacity: 1,
       yPercent: 0,
-      duration: 1,
+      duration: 0.6,
       stagger: {
-        amount: 1,
+        amount: 0.6,
       },
     },
-    "<+=0.4"
+    "<+=0.3"
   )
   .fromTo(
     "#esports-wrapper .project-info-code",
@@ -820,7 +839,7 @@ tl_pro_first
       opacity: 1,
       duration: 0.5,
     },
-    ">-=0.7"
+    "<+=0.5"
   )
   .fromTo(
     "#esports-wrapper .project-info-links",
@@ -901,7 +920,7 @@ tl_pro_second
       yPercent: 0,
       duration: 0.8,
       stagger: {
-        amount: 0.3,
+        amount: 0.5,
       },
     },
     "<"
@@ -912,12 +931,12 @@ tl_pro_second
     {
       opacity: 1,
       yPercent: 0,
-      duration: 1,
+      duration: 0.6,
       stagger: {
-        amount: 1,
+        amount: 0.6,
       },
     },
-    "<+=0.4"
+    "<+=0.3"
   )
   .fromTo(
     "#bejour-wrapper .project-info-code",
@@ -926,7 +945,7 @@ tl_pro_second
       opacity: 1,
       duration: 0.5,
     },
-    ">-=0.7"
+    "<+=0.5"
   )
   .fromTo(
     "#bejour-wrapper .project-info-links",
@@ -1053,9 +1072,9 @@ tl_contact
     {
       yPercent: 0,
       opacity: 1,
-      duration: 1,
+      duration: 0.8,
       stagger: {
-        amount: 1,
+        amount: 0.5,
       },
     },
     "<"
@@ -1067,7 +1086,7 @@ tl_contact
       opacity: 1,
       duration: 1,
     },
-    ">-=0.4"
+    "<+=0.9"
   )
   .fromTo(
     "#section-contact .contact-info-wrapper #contact-icons",
@@ -1076,7 +1095,7 @@ tl_contact
       opacity: 1,
       duration: 1,
     },
-    "<+=0.1"
+    "<+=0.2"
   );
 
 // gsap.fromTo(
