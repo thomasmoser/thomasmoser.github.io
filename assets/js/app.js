@@ -1086,7 +1086,7 @@ tl_contact
       opacity: 1,
       duration: 1,
     },
-    "<+=1.1"
+    "<+=1"
   )
   .fromTo(
     "#section-contact .contact-info-wrapper #contact-icons",
