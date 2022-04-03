@@ -2,6 +2,9 @@ import LocomotiveScroll from "locomotive-scroll";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+import { CustomEase } from "gsap/CustomEase";
+gsap.registerPlugin(CustomEase);
+
 //init smooth scroll
 let scrollContainer = document.querySelector("[data-scroll-container]");
 const scroll = new LocomotiveScroll({
@@ -306,6 +309,10 @@ gsap.fromTo(
       end: "center center",
       scrub: 2,
     },
+    ease: CustomEase.create(
+      "custom",
+      "M0,0 C0.083,0.294 0.372,0.452 0.638,0.642 0.732,0.708 0.74,0.834 0.79,0.912 0.832,1.012 0.997,1 1,1 "
+    ),
     scaleY: 1,
   }
 );
