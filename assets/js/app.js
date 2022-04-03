@@ -563,15 +563,15 @@ tl_exp_first.fromTo(
   "<"
 );
 //experience section first point detail***********
-let tl_exp_first_detail = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#exp-points .exp-point:nth-child(1) .exp-point-detail",
-    scroller: scrollContainer,
-    start: "top center",
-  },
-});
+// let tl_exp_first_detail = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: "#exp-points .exp-point:nth-child(1) .exp-point-detail",
+//     scroller: scrollContainer,
+//     start: "top center",
+//   },
+// });
 
-tl_exp_first_detail
+tl_exp_first
   .fromTo(
     "#exp-points .exp-point:nth-child(1) .exp-point-detail .exp-point-detail-separator",
     { scaleY: 0 },
@@ -649,15 +649,15 @@ tl_exp_second.fromTo(
   "<"
 );
 //experience section second point detail***********
-let tl_exp_second_detail = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#exp-points .exp-point:nth-child(2) .exp-point-detail",
-    scroller: scrollContainer,
-    start: "top center",
-  },
-});
+// let tl_exp_second_detail = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: "#exp-points .exp-point:nth-child(2) .exp-point-detail",
+//     scroller: scrollContainer,
+//     start: "top center",
+//   },
+// });
 
-tl_exp_second_detail
+tl_exp_second
   .fromTo(
     "#exp-points .exp-point:nth-child(2) .exp-point-detail .exp-point-detail-separator",
     { scaleY: 0 },
