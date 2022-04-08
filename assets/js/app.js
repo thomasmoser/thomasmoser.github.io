@@ -289,10 +289,10 @@ gsap.fromTo(
       trigger: "#section-edu .wtm-category",
       scroller: scrollContainer,
       start: "top center",
-      end: "bottom+=350 center",
+      end: "bottom+=600 center",
       scrub: 2,
     },
-    xPercent: -10,
+    xPercent: -20,
   }
 );
 
@@ -540,10 +540,10 @@ gsap.fromTo(
       trigger: "#section-exp .wtm-category",
       scroller: scrollContainer,
       start: "top center",
-      end: "bottom+=200 center",
+      end: "bottom+=600 center",
       scrub: 2,
     },
-    xPercent: -5,
+    xPercent: -20,
   }
 );
 
