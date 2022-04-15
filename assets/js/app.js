@@ -111,7 +111,7 @@ split("#section-contact .quote-text");
 
 //load animation*********************************************************************
 let tl_hero_inc_delay = 0.2;
-let tl_page_break_dur = 1.4;
+let tl_page_break_dur = 1;
 let tl_hero = gsap.timeline();
 
 tl_hero
@@ -174,11 +174,12 @@ tl_hero
   .fromTo(".backlight", { opacity: 0 }, { opacity: 1, duration: 2 }, "<")
   .fromTo(
     "#section-hero  .page-break",
-    { scaleX: 0 },
+    { scaleX: 0, opacity: 0.5 },
     {
       scaleX: 1,
+      opacity: 1,
       duration: `${tl_page_break_dur}`,
-      ease: "Power1.easeInOut",
+      ease: "power1.inOut",
     },
     `>-=${tl_hero_inc_delay + 1.2}`
   )
@@ -190,7 +191,7 @@ tl_hero
       yPercent: 0,
       duration: 0.5,
     },
-    `>-=${tl_hero_inc_delay + tl_page_break_dur}`
+    `>-=${tl_hero_inc_delay + tl_page_break_dur - 0.2}`
   )
   .fromTo(
     "#abstract-text-id",
@@ -226,14 +227,21 @@ tl_hero
       )
       .duration(1),
     "<"
-  );
+  )
+  .to("#section-edu", { opacity: 1 });
 
 //Animation education section***********************************************************
 let tl_edu_desc = gsap.timeline({
   scrollTrigger: {
     trigger: "#section-edu .wtm-category",
     scroller: scrollContainer,
-    start: "top center",
+    start: () => {
+      if (window.innerHeight / window.innerWidth >= 1) {
+        return "top-=100 center";
+      } else {
+        return "top bottom-=100";
+      }
+    },
   },
 });
 
@@ -273,7 +281,13 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: "#section-edu .wtm-category",
       scroller: scrollContainer,
-      start: "top center",
+      start: () => {
+        if (window.innerHeight / window.innerWidth >= 1) {
+          return "top-=100 center";
+        } else {
+          return "top bottom-=100";
+        }
+      },
       //end: "bottom center",
     },
     opacity: 1,
@@ -288,7 +302,13 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: "#section-edu .wtm-category",
       scroller: scrollContainer,
-      start: "top center",
+      start: () => {
+        if (window.innerHeight / window.innerWidth >= 1) {
+          return "top-=100 center";
+        } else {
+          return "top bottom-=100";
+        }
+      },
       end: "bottom+=600 center",
       scrub: 2,
     },
@@ -306,7 +326,7 @@ gsap.fromTo(
       trigger: "#edu-tl-container .tl-point:nth-child(2)",
       start: "top center",
       endTrigger: "#edu-tl-container .tl-point:nth-child(4)",
-      end: "center center",
+      end: "top center",
       scrub: 2,
     },
     ease: CustomEase.create(
@@ -322,7 +342,13 @@ let tl_edu_first = gsap.timeline({
   scrollTrigger: {
     trigger: "#edu-tl-container .tl-point:nth-child(2)",
     scroller: scrollContainer,
-    start: "top center",
+    start: () => {
+      if (window.innerHeight / window.innerWidth >= 1) {
+        return "top-=100 center";
+      } else {
+        return "top bottom-=100";
+      }
+    },
   },
 });
 
@@ -375,7 +401,13 @@ let tl_edu_second = gsap.timeline({
   scrollTrigger: {
     trigger: "#edu-tl-container .tl-point:nth-child(3)",
     scroller: scrollContainer,
-    start: "top center",
+    start: () => {
+      if (window.innerHeight / window.innerWidth >= 1) {
+        return "top-=100 center";
+      } else {
+        return "top bottom-=100";
+      }
+    },
   },
 });
 
@@ -428,7 +460,13 @@ let tl_edu_third = gsap.timeline({
   scrollTrigger: {
     trigger: "#edu-tl-container .tl-point:nth-child(4)",
     scroller: scrollContainer,
-    start: "top center",
+    start: () => {
+      if (window.innerHeight / window.innerWidth >= 1) {
+        return "top-=100 center";
+      } else {
+        return "top bottom-=100";
+      }
+    },
   },
 });
 
@@ -484,7 +522,13 @@ let tl_exp_desc = gsap.timeline({
   scrollTrigger: {
     trigger: "#section-exp .wtm-category",
     scroller: scrollContainer,
-    start: "top center",
+    start: () => {
+      if (window.innerHeight / window.innerWidth >= 1) {
+        return "top-=100 center";
+      } else {
+        return "top bottom-=100";
+      }
+    },
   },
 });
 
@@ -524,7 +568,13 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: "#section-exp .wtm-category",
       scroller: scrollContainer,
-      start: "top center",
+      start: () => {
+        if (window.innerHeight / window.innerWidth >= 1) {
+          return "top-=100 center";
+        } else {
+          return "top bottom-=100";
+        }
+      },
       //end: "bottom center",
     },
     opacity: 1,
@@ -539,7 +589,13 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: "#section-exp .wtm-category",
       scroller: scrollContainer,
-      start: "top center",
+      start: () => {
+        if (window.innerHeight / window.innerWidth >= 1) {
+          return "top-=100 center";
+        } else {
+          return "top bottom-=100";
+        }
+      },
       end: "bottom+=600 center",
       scrub: 2,
     },
@@ -552,7 +608,13 @@ let tl_exp_first = gsap.timeline({
   scrollTrigger: {
     trigger: "#exp-points .exp-point:nth-child(1)",
     scroller: scrollContainer,
-    start: "top center",
+    start: () => {
+      if (window.innerHeight / window.innerWidth >= 1) {
+        return "top-=100 center";
+      } else {
+        return "top bottom-=100";
+      }
+    },
   },
 });
 
@@ -638,7 +700,13 @@ let tl_exp_second = gsap.timeline({
   scrollTrigger: {
     trigger: "#exp-points .exp-point:nth-child(2)",
     scroller: scrollContainer,
-    start: "top center",
+    start: () => {
+      if (window.innerHeight / window.innerWidth >= 1) {
+        return "top-=100 center";
+      } else {
+        return "top bottom-=100";
+      }
+    },
   },
 });
 
@@ -726,7 +794,13 @@ let tl_pro_desc = gsap.timeline({
   scrollTrigger: {
     trigger: "#section-pro .projects-grid-wrapper",
     scroller: scrollContainer,
-    start: "top center",
+    start: () => {
+      if (window.innerHeight / window.innerWidth >= 1) {
+        return "top-=100 center";
+      } else {
+        return "top bottom-=100";
+      }
+    },
   },
 });
 
@@ -808,7 +882,13 @@ let tl_pro_first = gsap.timeline({
   scrollTrigger: {
     trigger: "#esports-wrapper",
     scroller: scrollContainer,
-    start: "top center",
+    start: () => {
+      if (window.innerHeight / window.innerWidth >= 1) {
+        return "top-=100 center";
+      } else {
+        return "top bottom-=100";
+      }
+    },
   },
 });
 
@@ -862,7 +942,8 @@ let tl_pro_first_img = gsap.timeline({
   scrollTrigger: {
     trigger: "#esports-wrapper",
     scroller: scrollContainer,
-    start: "top center",
+    start: "top bottom",
+    end: "bottom top",
     scrub: 1,
   },
 });
@@ -877,7 +958,7 @@ tl_pro_first_img
     "<"
   )
   .fromTo(
-    "#esports-wrapper .img-row-wrapper .img-row:nth-child(1) .img-wrapper:nth-child(1)",
+    "#esports-wrapper .img-row-wrapper .img-row:nth-child(2) .img-wrapper:nth-child(1)",
     { y: 0 },
     {
       y: -50,
@@ -901,7 +982,7 @@ tl_pro_first_img
     "<"
   )
   .fromTo(
-    "#esports-wrapper .img-row-wrapper .img-row:nth-child(2) .img-wrapper:nth-child(1)",
+    "#esports-wrapper .img-row-wrapper .img-row:nth-child(1) .img-wrapper:nth-child(1)",
     { y: 0 },
     {
       y: -40,
@@ -914,7 +995,13 @@ let tl_pro_second = gsap.timeline({
   scrollTrigger: {
     trigger: "#bejour-wrapper",
     scroller: scrollContainer,
-    start: "top center",
+    start: () => {
+      if (window.innerHeight / window.innerWidth >= 1) {
+        return "top-=100 center";
+      } else {
+        return "top bottom-=100";
+      }
+    },
   },
 });
 
@@ -969,7 +1056,8 @@ let tl_pro_second_img = gsap.timeline({
   scrollTrigger: {
     trigger: "#bejour-wrapper",
     scroller: scrollContainer,
-    start: "top center",
+    start: "top bottom",
+    end: "bottom top",
     scrub: 1,
   },
 });
@@ -984,7 +1072,7 @@ tl_pro_second_img
     "<"
   )
   .fromTo(
-    "#bejour-wrapper .img-row-wrapper .img-row:nth-child(1) .img-wrapper:nth-child(1)",
+    "#bejour-wrapper .img-row-wrapper .img-row:nth-child(2) .img-wrapper:nth-child(1)",
     { y: 0 },
     {
       y: -50,
@@ -1008,7 +1096,7 @@ tl_pro_second_img
     "<"
   )
   .fromTo(
-    "#bejour-wrapper .img-row-wrapper .img-row:nth-child(2) .img-wrapper:nth-child(1)",
+    "#bejour-wrapper .img-row-wrapper .img-row:nth-child(1) .img-wrapper:nth-child(1)",
     { y: 0 },
     {
       y: -40,
@@ -1022,7 +1110,13 @@ let tl_contact_desc = gsap.timeline({
   scrollTrigger: {
     trigger: "#section-contact",
     scroller: scrollContainer,
-    start: "top center",
+    start: () => {
+      if (window.innerHeight / window.innerWidth >= 1) {
+        return "top-=100 center";
+      } else {
+        return "top bottom-=100";
+      }
+    },
   },
 });
 
@@ -1059,7 +1153,13 @@ let tl_contact = gsap.timeline({
   scrollTrigger: {
     trigger: "#section-contact .contact-text-wrapper",
     scroller: scrollContainer,
-    start: "top center",
+    start: () => {
+      if (window.innerHeight / window.innerWidth >= 1) {
+        return "top-=100 center";
+      } else {
+        return "top bottom-=100";
+      }
+    },
   },
 });
 
