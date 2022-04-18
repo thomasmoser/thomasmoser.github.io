@@ -374,6 +374,7 @@ tl_edu_first
     },
     "<"
   )
+
   .fromTo(
     ".tl-point:nth-child(2) .tl-point-bg",
     { opacity: 0 },
@@ -394,6 +395,18 @@ tl_edu_first
       },
     },
     "<+=0.8"
+  )
+  .fromTo(
+    ".tl-point:nth-child(2) .tl-subentry-marker",
+    { opacity: 0 },
+    {
+      opacity: 1,
+      duration: 1,
+      stagger: {
+        amount: 0.6,
+      },
+    },
+    "<"
   );
 
 //education section second point***********
@@ -453,6 +466,18 @@ tl_edu_second
       },
     },
     "<+=0.8"
+  )
+  .fromTo(
+    ".tl-point:nth-child(3) .tl-subentry-marker",
+    { opacity: 0 },
+    {
+      opacity: 1,
+      duration: 1,
+      stagger: {
+        amount: 0.6,
+      },
+    },
+    "<"
   );
 
 //education section third point***********
@@ -512,6 +537,18 @@ tl_edu_third
       },
     },
     "<+=0.8"
+  )
+  .fromTo(
+    ".tl-point:nth-child(4) .tl-subentry-marker",
+    { opacity: 0 },
+    {
+      opacity: 1,
+      duration: 1,
+      stagger: {
+        amount: 0.6,
+      },
+    },
+    "<"
   );
 
 //Animation experiece section***********************************************************
