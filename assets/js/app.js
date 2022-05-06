@@ -114,7 +114,7 @@ let tl_hero_inc_delay = 0.2;
 let tl_page_break_dur = 1;
 let tl_hero = gsap.timeline();
 
-gsap.to("#section-edu", { opacity: 1, delay: 0.3 });
+gsap.to("#section-edu", { opacity: 1, delay: 0.3, duration: 0.1 });
 
 tl_hero
   .add(
@@ -138,7 +138,7 @@ tl_hero
       yPercent: 0,
       duration: 0.5,
     },
-    `>-=${tl_hero_inc_delay + 0.6}`
+    `>-=${tl_hero_inc_delay + 0.7}`
   )
   .fromTo(
     ".nav-second > .nav-a-replace > .nav-title-wrapper > .rev",
@@ -193,7 +193,7 @@ tl_hero
       yPercent: 0,
       duration: 0.5,
     },
-    `>-=${tl_hero_inc_delay + tl_page_break_dur - 0.2}`
+    `>-=${tl_hero_inc_delay + tl_page_break_dur - 0.1}`
   )
   .fromTo(
     "#abstract-text-id",
