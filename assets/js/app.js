@@ -114,7 +114,7 @@ let tl_hero_inc_delay = 0.2;
 let tl_page_break_dur = 1;
 let tl_hero = gsap.timeline();
 
-gsap.to("#section-edu", { opacity: 1, delay: 0.3, duration: 0.1 });
+gsap.set("#section-edu", { visibility: "visible" });
 
 tl_hero
   .add(
