@@ -66,6 +66,10 @@ nav_contact.addEventListener("click", (event) => {
 gsap.registerPlugin(ScrollTrigger);
 scroll.on("scroll", ScrollTrigger.update);
 
+ScrollTrigger.config({
+  autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
+});
+
 ScrollTrigger.scrollerProxy(scrollContainer, {
   scrollTop(value) {
     return arguments.length ? scroll.scrollTo(value, 0, 0) : scroll.scroll.instance.scroll.y;
@@ -587,7 +591,7 @@ tl_exp_desc
 
 gsap.fromTo(
   "#section-exp .wtm-category",
-  { opacity: 0 },
+  { opacity: 0.01 },
   {
     scrollTrigger: {
       trigger: "#section-exp .wtm-category",
