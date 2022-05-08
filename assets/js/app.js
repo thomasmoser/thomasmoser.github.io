@@ -239,14 +239,21 @@ let tl_edu_desc = gsap.timeline({
     start: () => {
       if (window.innerHeight / window.innerWidth >= 1) {
         return "top-=100 center";
-      } else {
-        return "top bottom-=100";
       }
+      return "top bottom-=100";
     },
   },
 });
 
 tl_edu_desc
+  .fromTo(
+    "#section-edu .wtm-category",
+    { opacity: 0.01 },
+    {
+      opacity: 1,
+      duration: 1.5,
+    }
+  )
   .fromTo(
     "#section-edu .page-break",
     { scaleX: 0 },
@@ -254,7 +261,8 @@ tl_edu_desc
       scaleX: 1,
       duration: 2,
       ease: "Power1.easeInOut",
-    }
+    },
+    "<"
   )
   .fromTo(
     "#section-edu .desc-review",
@@ -277,27 +285,6 @@ tl_edu_desc
 
 gsap.fromTo(
   "#section-edu .wtm-category",
-  { opacity: 0 },
-  {
-    scrollTrigger: {
-      trigger: "#section-edu .wtm-category",
-      scroller: scrollContainer,
-      start: () => {
-        if (window.innerHeight / window.innerWidth >= 1) {
-          return "top-=100 center";
-        } else {
-          return "top bottom-=100";
-        }
-      },
-      //end: "bottom center",
-    },
-    opacity: 1,
-    duration: 1.5,
-  }
-);
-
-gsap.fromTo(
-  "#section-edu .wtm-category",
   { xPercent: 0 },
   {
     scrollTrigger: {
@@ -306,9 +293,8 @@ gsap.fromTo(
       start: () => {
         if (window.innerHeight / window.innerWidth >= 1) {
           return "top-=100 center";
-        } else {
-          return "top bottom-=100";
         }
+        return "top bottom-=100";
       },
       end: "bottom+=600 center",
       scrub: 2,
