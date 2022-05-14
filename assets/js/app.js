@@ -154,7 +154,6 @@ tl_hero
     },
     `>-=${tl_hero_inc_delay}`
   )
-
   .fromTo(
     "#hero-header",
     { opacity: 0 },
@@ -317,13 +316,13 @@ gsap.fromTo(
       trigger: "#edu-tl-container .tl-point:nth-child(2)",
       start: "top center",
       endTrigger: "#edu-tl-container .tl-point:nth-child(4)",
-      end: "top center",
+      end: "center center",
       scrub: 2,
     },
-    ease: CustomEase.create(
-      "custom",
-      "M0,0 C0.083,0.294 0.372,0.452 0.638,0.642 0.732,0.708 0.74,0.834 0.79,0.912 0.832,1.012 0.997,1 1,1 "
-    ),
+    // ease: CustomEase.create(
+    //   "custom",
+    //   "M0,0 C0.083,0.294 0.372,0.452 0.638,0.642 0.732,0.708 0.74,0.834 0.79,0.912 0.832,1.012 0.997,1 1,1 "
+    // ),
     scaleY: 1,
   }
 );
@@ -333,6 +332,7 @@ let tl_edu_first = gsap.timeline({
   scrollTrigger: {
     trigger: "#edu-tl-container .tl-point:nth-child(2)",
     scroller: scrollContainer,
+    // start: "top bottom-=100",
     start: () => {
       if (window.innerHeight / window.innerWidth >= 1) {
         return "top-=100 center";
@@ -365,16 +365,6 @@ tl_edu_first
     },
     "<"
   )
-
-  .fromTo(
-    ".tl-point:nth-child(2) .tl-point-bg",
-    { opacity: 0 },
-    {
-      opacity: 1,
-      duration: 1.5,
-    },
-    "<"
-  )
   .fromTo(
     ".tl-point:nth-child(2) .gen-detail",
     { opacity: 0 },
@@ -388,16 +378,13 @@ tl_edu_first
     "<+=0.8"
   )
   .fromTo(
-    ".tl-point:nth-child(2) .tl-subentry-marker",
+    ".tl-point:nth-child(2) .tl-footer-container",
     { opacity: 0 },
     {
       opacity: 1,
-      duration: 1,
-      stagger: {
-        amount: 0.6,
-      },
+      duration: 0.5,
     },
-    "<"
+    ">-0.5"
   );
 
 //education section second point***********
@@ -405,6 +392,8 @@ let tl_edu_second = gsap.timeline({
   scrollTrigger: {
     trigger: "#edu-tl-container .tl-point:nth-child(3)",
     scroller: scrollContainer,
+    // start: "top bottom-=100",
+
     start: () => {
       if (window.innerHeight / window.innerWidth >= 1) {
         return "top-=100 center";
@@ -437,15 +426,7 @@ tl_edu_second
     },
     "<"
   )
-  .fromTo(
-    ".tl-point:nth-child(3) .tl-point-bg",
-    { opacity: 0 },
-    {
-      opacity: 1,
-      duration: 1.5,
-    },
-    "<"
-  )
+
   .fromTo(
     ".tl-point:nth-child(3) .gen-detail",
     { opacity: 0 },
@@ -459,16 +440,13 @@ tl_edu_second
     "<+=0.8"
   )
   .fromTo(
-    ".tl-point:nth-child(3) .tl-subentry-marker",
+    ".tl-point:nth-child(3) .tl-footer-container",
     { opacity: 0 },
     {
       opacity: 1,
-      duration: 1,
-      stagger: {
-        amount: 0.6,
-      },
+      duration: 0.5,
     },
-    "<"
+    ">-=0.5"
   );
 
 //education section third point***********
@@ -476,13 +454,15 @@ let tl_edu_third = gsap.timeline({
   scrollTrigger: {
     trigger: "#edu-tl-container .tl-point:nth-child(4)",
     scroller: scrollContainer,
-    start: () => {
-      if (window.innerHeight / window.innerWidth >= 1) {
-        return "top-=100 center";
-      } else {
-        return "top bottom-=100";
-      }
-    },
+    start: "top-=100 center",
+
+    // start: () => {
+    //   if (window.innerHeight / window.innerWidth >= 1) {
+    //     return "top-=100 center";
+    //   } else {
+    //     return "top bottom-=100";
+    //   }
+    // },
   },
 });
 
@@ -508,15 +488,7 @@ tl_edu_third
     },
     "<"
   )
-  .fromTo(
-    ".tl-point:nth-child(4) .tl-point-bg",
-    { opacity: 0 },
-    {
-      opacity: 1,
-      duration: 1.5,
-    },
-    "<"
-  )
+
   .fromTo(
     ".tl-point:nth-child(4) .gen-detail",
     { opacity: 0 },
@@ -530,16 +502,13 @@ tl_edu_third
     "<+=0.8"
   )
   .fromTo(
-    ".tl-point:nth-child(4) .tl-subentry-marker",
+    ".tl-point:nth-child(4) .tl-footer-container",
     { opacity: 0 },
     {
       opacity: 1,
-      duration: 1,
-      stagger: {
-        amount: 0.6,
-      },
+      duration: 0.5,
     },
-    "<"
+    ">-=0.2"
   );
 
 //Animation experiece section***********************************************************
@@ -979,7 +948,7 @@ let tl_pro_first_img = gsap.timeline({
 tl_pro_first_img
   .fromTo(
     "#esports-wrapper .img-row-wrapper .vignette",
-    { y: 0 },
+    { y: -15 },
     {
       y: -50,
     },
@@ -1093,7 +1062,7 @@ let tl_pro_second_img = gsap.timeline({
 tl_pro_second_img
   .fromTo(
     "#bejour-wrapper .img-row-wrapper .vignette",
-    { y: 0 },
+    { y: -15 },
     {
       y: -50,
     },
