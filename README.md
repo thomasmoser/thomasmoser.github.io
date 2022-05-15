@@ -4,7 +4,7 @@ Link to the page: **[https://moser-thomas.com/](https://moser-thomas.com/)**
 I like learning. I like creative projects. This page and its contents serve as a public showcase of my commitment to that.
 
 ## Technology:
-- **Design**: HTML, vanilla JavaScript, CSS ([sass](https://sass-lang.com/))
+- **Design**: HTML, vanilla JavaScript, CSS ([Sass](https://sass-lang.com/))
 - **Animation**: [GSAP](https://greensock.com/gsap/)
 - **Scrolling**: [locomotive-scroll](https://github.com/locomotivemtl/locomotive-scroll)
 - **Package Manager**: [npm](https://www.npmjs.com/)
