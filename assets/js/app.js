@@ -456,7 +456,7 @@ let tl_edu_second = gsap.timeline({
       if (window.innerHeight / window.innerWidth >= 1) {
         return "top-=100 center";
       } else {
-        return "top center+=100";
+        return "top bottom-=100";
       }
     },
   },

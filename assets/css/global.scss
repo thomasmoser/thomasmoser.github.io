@@ -849,6 +849,7 @@ p.gen-detail.text,
 }
 
 .tl-footer-container {
+  visibility: hidden;
   position: relative;
   font-size: 1.125rem;
   // width: Min(35ch, 80%);
@@ -880,9 +881,10 @@ p.gen-detail.text,
       margin-left: auto;
     }
     span:last-of-type {
-      margin-right: auto;
+      margin-right: 0;
     }
     span svg {
+      display: none;
       width: 18px;
       height: 18px;
       margin-right: 3px;
@@ -916,7 +918,7 @@ p.gen-detail.text,
       transparent 75%,
       transparent 100%
     );
-    background-size: 20px 1px;
+    background-size: 15px 1px;
     opacity: 0.5;
   }
 }
