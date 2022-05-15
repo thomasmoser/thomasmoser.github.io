@@ -408,29 +408,29 @@ tl_edu_first
     "<+=0.8"
   );
 
-let tl_edu_first_footer = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".tl-point:nth-child(2) .tl-footer-container",
-    scroller: scrollContainer,
-    // start: "top bottom-=100",
-    start: () => {
-      if (window.innerHeight / window.innerWidth >= 1) {
-        return "top-=100 center";
-      } else {
-        return "top bottom-=100";
-      }
-    },
-  },
-});
-tl_edu_first_footer.fromTo(
-  ".tl-point:nth-child(2) .tl-footer-container",
-  { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" },
-  {
-    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-    duration: 1.5,
-  },
-  ">-0.5"
-);
+// let tl_edu_first_footer = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".tl-point:nth-child(2) .tl-footer-container",
+//     scroller: scrollContainer,
+//     // start: "top bottom-=100",
+//     start: () => {
+//       if (window.innerHeight / window.innerWidth >= 1) {
+//         return "top-=100 center";
+//       } else {
+//         return "top bottom-=100";
+//       }
+//     },
+//   },
+// });
+// tl_edu_first_footer.fromTo(
+//   ".tl-point:nth-child(2) .tl-footer-container",
+//   { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" },
+//   {
+//     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+//     duration: 1.5,
+//   },
+//   ">-0.5"
+// );
 // .fromTo(
 //   ".tl-point:nth-child(2) .tl-footer-container span",
 //   { yPercent: 100 },
@@ -463,12 +463,21 @@ let tl_edu_second = gsap.timeline({
 
 tl_edu_second
   .fromTo(
+    ".tl-point:nth-child(2) .tl-footer-container",
+    { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" },
+    {
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+      duration: 1.5,
+    }
+  )
+  .fromTo(
     ".tl-point:nth-child(3) .tl-marker-container",
     { opacity: 0 },
     {
       opacity: 1,
       duration: 0.8,
-    }
+    },
+    "<"
   )
   .fromTo(
     ".tl-point:nth-child(3) .rev",
@@ -496,29 +505,29 @@ tl_edu_second
     },
     "<+=0.8"
   );
-let tl_edu_second_footer = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".tl-point:nth-child(3) .tl-footer-container",
-    scroller: scrollContainer,
-    // start: "top bottom-=100",
-    start: () => {
-      if (window.innerHeight / window.innerWidth >= 1) {
-        return "top-=100 center";
-      } else {
-        return "top bottom-=100";
-      }
-    },
-  },
-});
-tl_edu_second_footer.fromTo(
-  ".tl-point:nth-child(3) .tl-footer-container",
-  { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" },
-  {
-    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-    duration: 1.5,
-  },
-  ">-=0.7"
-);
+// let tl_edu_second_footer = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".tl-point:nth-child(3) .tl-footer-container",
+//     scroller: scrollContainer,
+//     // start: "top bottom-=100",
+//     start: () => {
+//       if (window.innerHeight / window.innerWidth >= 1) {
+//         return "top-=100 center";
+//       } else {
+//         return "top bottom-=100";
+//       }
+//     },
+//   },
+// });
+// tl_edu_second_footer.fromTo(
+//   ".tl-point:nth-child(3) .tl-footer-container",
+//   { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" },
+//   {
+//     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+//     duration: 1.5,
+//   },
+//   ">-=0.7"
+// );
 // .fromTo(
 //   ".tl-point:nth-child(3) .tl-footer-container span",
 //   { yPercent: 100 },
@@ -538,25 +547,27 @@ let tl_edu_third = gsap.timeline({
     trigger: "#edu-tl-container .tl-point:nth-child(4)",
     scroller: scrollContainer,
     start: "top-=100 center",
-
-    // start: () => {
-    //   if (window.innerHeight / window.innerWidth >= 1) {
-    //     return "top-=100 center";
-    //   } else {
-    //     return "top bottom-=100";
-    //   }
-    // },
   },
 });
 
 tl_edu_third
+  .fromTo(
+    ".tl-point:nth-child(3) .tl-footer-container",
+    { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" },
+    {
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+      duration: 1.5,
+    },
+    "<"
+  )
   .fromTo(
     ".tl-point:nth-child(4) .tl-marker-container",
     { opacity: 0 },
     {
       opacity: 1,
       duration: 0.8,
-    }
+    },
+    "<"
   )
   .fromTo(
     ".tl-point:nth-child(4) .rev",
