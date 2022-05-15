@@ -9,7 +9,7 @@ I like learning. I like creative projects. This page and its contents serve as a
 - **Scrolling**: [locomotive-scroll](https://github.com/locomotivemtl/locomotive-scroll)
 - **Package Manager**: [npm](https://www.npmjs.com/)
 - **Module Bundler**: [webpack](https://webpack.js.org/)
-- **Deployment**: [GitHub Pages](https://pages.github.com/)
+- **Deployment & Hosting**: [GitHub Pages](https://pages.github.com/)
 
 ## Tools:
 - **Development**: [Visual Studio Code](https://code.visualstudio.com/)
