@@ -12,7 +12,7 @@ I like learning. I like creative projects. This page and its contents serve as a
 - **Deployment**: [GitHub Pages](https://pages.github.com/)
 
 ## Tools:
-- **IDE**: [Visual Studio Code](https://code.visualstudio.com/)
+- **Development**: [Visual Studio Code](https://code.visualstudio.com/)
 - **Source Control**: [GitHub](https://github.com/)
 - **Design**: [Figma](https://www.figma.com/), [Photoshop](https://www.adobe.com/products/photoshop.html)
 
