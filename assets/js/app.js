@@ -144,8 +144,8 @@ split(".project-info .gen-detail");
 split("#section-contact .quote-text");
 
 //load animation*********************************************************************
-let tl_hero_inc_delay = 0.2;
-let tl_page_break_dur = 1;
+// let tl_hero_inc_delay = 0.2;
+// let tl_page_break_dur = 1;
 let tl_hero = gsap.timeline();
 
 gsap.set("#section-edu", { visibility: "visible" });
@@ -162,7 +162,7 @@ tl_hero
           duration: 1,
         }
       )
-      .delay(0.5)
+      .delay(0.6)
   )
   .fromTo(
     ".nav-first > .nav-a-replace > .nav-title-wrapper > .rev",
@@ -170,9 +170,9 @@ tl_hero
     {
       opacity: 1,
       yPercent: 0,
-      duration: 0.5,
+      duration: 0.6,
     },
-    `>-=${tl_hero_inc_delay + 0.7}`
+    "<+=0.1"
   )
   .fromTo(
     ".nav-second > .nav-a-replace > .nav-title-wrapper > .rev",
@@ -180,18 +180,18 @@ tl_hero
     {
       opacity: 1,
       yPercent: 0,
-      duration: 0.5,
+      duration: 0.6,
     },
-    `>-=${tl_hero_inc_delay}`
+    "<+=0.2"
   )
   .fromTo(
     "#hero-header",
     { opacity: 0 },
     {
       opacity: 1,
-      duration: 0.3,
+      duration: 0.001,
     },
-    `>-=${tl_hero_inc_delay + 0.4}`
+    "<"
   )
   .fromTo(
     "#hero-header .rev",
@@ -199,68 +199,64 @@ tl_hero
     {
       opacity: 1,
       yPercent: 0,
-      duration: 0.8,
+      duration: 0.7,
       stagger: {
         amount: 0.5,
       },
+      ease: "power1.out",
     },
-    `<`
+    "<"
   )
-  .fromTo(".backlight", { opacity: 0 }, { opacity: 1, duration: 2 }, "<")
+  .fromTo(".backlight", { opacity: 0 }, { opacity: 0.8, duration: 4 }, "<+=0.1")
+  .fromTo(
+    ".author.rev",
+    { opacity: 0 },
+    {
+      opacity: 1,
+      duration: 1.5,
+    },
+    "<+=0.3"
+  )
   .fromTo(
     "#section-hero  .page-break",
-    { scaleX: 0, opacity: 0.5 },
+    { scaleX: 0, opacity: 0 },
     {
       scaleX: 1,
       opacity: 1,
-      duration: `${tl_page_break_dur}`,
-      ease: "power1.inOut",
+      duration: 2,
+      ease: "power2.out",
     },
-    `>-=${tl_hero_inc_delay + 1.2}`
+    "<"
   )
   .fromTo(
-    ".author.rev",
-    { opacity: 0, yPercent: 100 },
+    ".abstract.rev",
+    { opacity: 0 },
     {
       opacity: 1,
-      yPercent: 0,
-      duration: 0.5,
+      duration: 1.5,
     },
-    `>-=${tl_hero_inc_delay + tl_page_break_dur - 0.1}`
+    "<+=0.25"
   )
   .fromTo(
     "#abstract-text-id",
     { opacity: 0 },
     {
       opacity: 1,
+      duration: 0.001,
     },
-    "<+=0.2"
+    "<"
   )
   .fromTo(
-    ".abstract.rev",
+    "#abstract-text-id .rev",
     { opacity: 0, yPercent: 100 },
     {
       opacity: 1,
       yPercent: 0,
-      duration: 0.5,
+      stagger: {
+        amount: 1,
+      },
+      duration: 1,
     },
-    "<"
-  )
-  .add(
-    gsap
-      .fromTo(
-        "#abstract-text-id .rev",
-        { opacity: 0, yPercent: 100 },
-        {
-          opacity: 1,
-          yPercent: 0,
-          duration: 1,
-          stagger: {
-            amount: 1,
-          },
-        }
-      )
-      .duration(1),
     "<"
   );
 
