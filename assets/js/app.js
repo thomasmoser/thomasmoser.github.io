@@ -168,11 +168,10 @@ tl_hero
     {
       opacity: 1,
       yPercent: 0,
-      duration: 0.7,
+      duration: 0.9,
       stagger: {
         amount: 0.5,
       },
-      ease: "power1.out",
     },
     "<"
   )
