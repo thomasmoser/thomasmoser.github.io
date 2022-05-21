@@ -604,9 +604,9 @@ tl_exp_first.fromTo(
   {
     yPercent: 0,
     opacity: 1,
-    duration: 0.8,
+    duration: 1,
     stagger: {
-      amount: 0.3,
+      amount: 0.5,
     },
   },
   "<"
@@ -688,9 +688,9 @@ tl_exp_second.fromTo(
   {
     yPercent: 0,
     opacity: 1,
-    duration: 0.8,
+    duration: 1,
     stagger: {
-      amount: 0.3,
+      amount: 0.5,
     },
   },
   "<"

@@ -273,6 +273,7 @@ main::after {
   background-size: 70px 70px;
   background-repeat: repeat;
   opacity: 1;
+  z-index: -99;
 }
 
 @media screen and (max-width: 800px) {
