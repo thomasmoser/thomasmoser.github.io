@@ -35,36 +35,6 @@ window.onresize = () => {
   scroll.update();
 };
 
-//custom scroll animation for tl-footer
-// let first = 0;
-// let second = 0;
-// let third = 0;
-// const first_break = document
-//   .querySelector(".tl-footer-container.first .tl-footer-break")
-//   .getBoundingClientRect().top;
-// const second_break = document
-//   .querySelector(".tl-footer-container.second .tl-footer-break")
-//   .getBoundingClientRect().top;
-// const third_break = document
-//   .querySelector(".tl-footer-container.third .tl-footer-break")
-//   .getBoundingClientRect().top;
-
-// scroll.on("scroll", (instance) => {
-//   let scrollY_amount = Math.max(window.scrollY, instance.scroll.y ? instance.scroll.y : 0);
-//   let tl_line_bottom =
-//     document.querySelector(".tl-line").getBoundingClientRect().bottom + scrollY_amount;
-
-//   if (first == 0 && tl_line_bottom + 100 >= first_break) {
-//     document
-//       .querySelector(".tl-footer-container.first .tl-footer-break")
-//       .classList.add("scale-out");
-//     document.querySelectorAll(".tl-footer-container.first span").forEach((element) => {
-//       element.classList.add("transform-up");
-//     });
-//     first++;
-//   }
-// });
-
 //nav click events
 //ids: nav-contact; nav-bio
 let nav_bio = document.querySelector("#nav-bio");
@@ -144,8 +114,7 @@ split(".project-info .gen-detail");
 split("#section-contact .quote-text");
 
 //load animation*********************************************************************
-// let tl_hero_inc_delay = 0.2;
-// let tl_page_break_dur = 1;
+
 let tl_hero = gsap.timeline();
 
 gsap.set("#section-edu", { visibility: "visible" });
@@ -404,42 +373,6 @@ tl_edu_first
     "<+=0.8"
   );
 
-// let tl_edu_first_footer = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".tl-point:nth-child(2) .tl-footer-container",
-//     scroller: scrollContainer,
-//     // start: "top bottom-=100",
-//     start: () => {
-//       if (window.innerHeight / window.innerWidth >= 1) {
-//         return "top-=100 center";
-//       } else {
-//         return "top bottom-=100";
-//       }
-//     },
-//   },
-// });
-// tl_edu_first_footer.fromTo(
-//   ".tl-point:nth-child(2) .tl-footer-container",
-//   { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" },
-//   {
-//     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-//     duration: 1.5,
-//   },
-//   ">-0.5"
-// );
-// .fromTo(
-//   ".tl-point:nth-child(2) .tl-footer-container span",
-//   { yPercent: 100 },
-//   {
-//     yPercent: 0,
-//     duration: 1,
-//     stagger: {
-//       amount: 0.3,
-//     },
-//   },
-//   "<"
-// );
-
 //education section second point***********
 let tl_edu_second = gsap.timeline({
   scrollTrigger: {
@@ -460,10 +393,11 @@ let tl_edu_second = gsap.timeline({
 tl_edu_second
   .fromTo(
     ".tl-point:nth-child(2) .tl-footer-container",
-    { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" },
+    { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)", opacity: 0 },
     {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-      duration: 1.5,
+      opacity: 1,
+      duration: 2.4,
     }
   )
   .fromTo(
@@ -501,41 +435,6 @@ tl_edu_second
     },
     "<+=0.8"
   );
-// let tl_edu_second_footer = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".tl-point:nth-child(3) .tl-footer-container",
-//     scroller: scrollContainer,
-//     // start: "top bottom-=100",
-//     start: () => {
-//       if (window.innerHeight / window.innerWidth >= 1) {
-//         return "top-=100 center";
-//       } else {
-//         return "top bottom-=100";
-//       }
-//     },
-//   },
-// });
-// tl_edu_second_footer.fromTo(
-//   ".tl-point:nth-child(3) .tl-footer-container",
-//   { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" },
-//   {
-//     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-//     duration: 1.5,
-//   },
-//   ">-=0.7"
-// );
-// .fromTo(
-//   ".tl-point:nth-child(3) .tl-footer-container span",
-//   { yPercent: 100 },
-//   {
-//     yPercent: 0,
-//     duration: 1,
-//     stagger: {
-//       amount: 0.3,
-//     },
-//   },
-//   "<"
-// );
 
 //education section third point***********
 let tl_edu_third = gsap.timeline({
@@ -549,12 +448,13 @@ let tl_edu_third = gsap.timeline({
 tl_edu_third
   .fromTo(
     ".tl-point:nth-child(3) .tl-footer-container",
-    { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" },
+    { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)", opacity: 0 },
     {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-      duration: 1.5,
-    },
-    "<"
+      opacity: 1,
+      duration: 1.6,
+      ease: "power1.out",
+    }
   )
   .fromTo(
     ".tl-point:nth-child(4) .tl-marker-container",
@@ -591,42 +491,9 @@ tl_edu_third
     },
     "<+=0.8"
   );
-// let tl_edu_third_footer = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".tl-point:nth-child(4) .tl-footer-container",
-//     scroller: scrollContainer,
-//     // start: "top bottom-=100",
-//     start: () => {
-//       if (window.innerHeight / window.innerWidth >= 1) {
-//         return "top-=100 center";
-//       } else {
-//         return "top bottom-=100";
-//       }
-//     },
-//   },
-// });
-// tl_edu_third_footer
-//   .fromTo(
-//     ".tl-point:nth-child(4) .tl-footer-container",
-//     { opacity: 0 },
-//     {
-//       opacity: 1,
-//       duration: 0.5,
-//     },
-//     ">-=0.2"
-//   )
-//   .fromTo(
-//     ".tl-point:nth-child(4) .tl-footer-container span",
-//     { yPercent: 100 },
-//     {
-//       yPercent: 0,
-//       duration: 1,
-//       stagger: {
-//         amount: 0.2,
-//       },
-//     },
-//     "<"
-//   );
+
+console.log(tl_edu_second.duration());
+console.log(tl_edu_third.duration());
 
 //Animation experiece section***********************************************************
 let exp_bg_delay = 0.5;
@@ -745,14 +612,6 @@ tl_exp_first.fromTo(
   },
   "<"
 );
-//experience section first point detail***********
-// let tl_exp_first_detail = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: "#exp-points .exp-point:nth-child(1) .exp-point-detail",
-//     scroller: scrollContainer,
-//     start: "top center",
-//   },
-// });
 
 tl_exp_first
   .fromTo(
