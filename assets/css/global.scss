@@ -306,6 +306,8 @@ header {
 }
 
 .nav-link {
+  width: fit-content;
+  margin-left: auto;
   margin-top: 0.8rem;
   text-align: right;
   transition: all calc(6 * var(--nav-anim-dur) - 5 * (var(--nav-anim-dur) - var(--nav-anim-delay)))
