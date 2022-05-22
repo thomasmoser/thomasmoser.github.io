@@ -183,7 +183,7 @@ tl_hero
       opacity: 1,
       duration: 1.5,
     },
-    "<+=0.3"
+    "<+=0.6"
   )
   .fromTo(
     "#section-hero  .page-break",
