@@ -181,9 +181,9 @@ tl_hero
     { opacity: 0 },
     {
       opacity: 1,
-      duration: 1.5,
+      duration: 2,
     },
-    "<+=0.6"
+    "<+=0.8"
   )
   .fromTo(
     "#section-hero  .page-break",
@@ -201,7 +201,7 @@ tl_hero
     { opacity: 0 },
     {
       opacity: 1,
-      duration: 1.5,
+      duration: 2,
     },
     "<+=0.25"
   )
