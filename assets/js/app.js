@@ -265,7 +265,7 @@ tl_edu_desc
     "<"
   )
   .fromTo(
-    "#section-edu .desc-review",
+    "#section-edu .desc-number",
     { opacity: 0 },
     {
       opacity: 1,
@@ -274,13 +274,13 @@ tl_edu_desc
     "<"
   )
   .fromTo(
-    "#section-edu .desc-number",
-    { yPercent: 100 },
+    "#section-edu .desc-review",
+    { opacity: 0 },
     {
-      yPercent: 0,
+      opacity: 1,
       duration: 1,
     },
-    "<+=0.2"
+    "<+=0.1"
   );
 
 gsap.fromTo(
@@ -528,7 +528,7 @@ tl_exp_desc
     }
   )
   .fromTo(
-    "#section-exp .desc-review",
+    "#section-exp .desc-number",
     { opacity: 0 },
     {
       opacity: 1,
@@ -537,13 +537,13 @@ tl_exp_desc
     "<"
   )
   .fromTo(
-    "#section-exp .desc-number",
-    { yPercent: 100 },
+    "#section-exp .desc-review",
+    { opacity: 0 },
     {
-      yPercent: 0,
+      opacity: 1,
       duration: 1,
     },
-    "<+=0.2"
+    "<+=0.1"
   );
 
 gsap.fromTo(
@@ -794,7 +794,7 @@ tl_pro_desc
     }
   )
   .fromTo(
-    "#section-pro .desc-review",
+    "#section-pro .desc-number",
     { opacity: 0 },
     {
       opacity: 1,
@@ -803,13 +803,13 @@ tl_pro_desc
     "<"
   )
   .fromTo(
-    "#section-pro .desc-number",
-    { yPercent: 100 },
+    "#section-pro .desc-review",
+    { opacity: 0 },
     {
-      yPercent: 0,
+      opacity: 1,
       duration: 1,
     },
-    "<+=0.2"
+    "<+=0.1"
   );
 
 //grid animation*******************
@@ -1112,7 +1112,7 @@ tl_contact_desc
     }
   )
   .fromTo(
-    "#section-contact .desc-review",
+    "#section-contact .desc-number",
     { opacity: 0 },
     {
       opacity: 1,
@@ -1121,13 +1121,13 @@ tl_contact_desc
     "<"
   )
   .fromTo(
-    "#section-contact .desc-number",
-    { yPercent: 100 },
+    "#section-contact .desc-review",
+    { opacity: 0 },
     {
-      yPercent: 0,
+      opacity: 1,
       duration: 1,
     },
-    "<+=0.2"
+    "<+=0.1"
   );
 
 let tl_contact = gsap.timeline({
