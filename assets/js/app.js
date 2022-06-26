@@ -3,7 +3,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 import { CustomEase } from "gsap/CustomEase";
-gsap.registerPlugin(CustomEase);
+import { CSSRulePlugin } from "gsap/CSSRulePlugin";
+gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 //init smooth scroll
 let scrollContainer = document.querySelector("[data-scroll-container]");
@@ -131,7 +132,7 @@ tl_hero
           duration: 1,
         }
       )
-      .delay(0.6)
+      .delay(0.3)
   )
   .fromTo(
     ".nav-first > .nav-a-replace > .nav-title-wrapper > .rev",
@@ -253,11 +254,13 @@ tl_edu_desc
   )
   .fromTo(
     "#section-edu .page-break",
-    { scaleX: 0 },
+    { scaleX: 0, opacity: 0 },
     {
       scaleX: 1,
+      opacity: 1,
       duration: 2,
-      ease: "Power1.easeInOut",
+      // ease: "Power1.easeInOut",
+      ease: "power2.out",
     },
     "<"
   )
@@ -515,11 +518,13 @@ let tl_exp_desc = gsap.timeline({
 tl_exp_desc
   .fromTo(
     "#section-exp .page-break",
-    { scaleX: 0 },
+    { scaleX: 0, opacity: 0 },
     {
       scaleX: 1,
+      opacity: 1,
       duration: 2,
-      ease: "Power1.easeInOut",
+      // ease: "Power1.easeInOut",
+      ease: "power2.out",
     }
   )
   .fromTo(
@@ -779,11 +784,13 @@ let tl_pro_desc = gsap.timeline({
 tl_pro_desc
   .fromTo(
     "#section-pro .page-break",
-    { scaleX: 0 },
+    { scaleX: 0, opacity: 0 },
     {
       scaleX: 1,
+      opacity: 1,
       duration: 2,
-      ease: "Power1.easeInOut",
+      // ease: "Power1.easeInOut",
+      ease: "power2.out",
     }
   )
   .fromTo(
@@ -1095,11 +1102,13 @@ let tl_contact_desc = gsap.timeline({
 tl_contact_desc
   .fromTo(
     "#section-contact .page-break",
-    { scaleX: 0 },
+    { scaleX: 0, opacity: 0 },
     {
       scaleX: 1,
+      opacity: 1,
       duration: 2,
-      ease: "Power1.easeInOut",
+      // ease: "Power1.easeInOut",
+      ease: "power2.out",
     }
   )
   .fromTo(

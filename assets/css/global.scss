@@ -259,10 +259,10 @@ main:before {
   // background-image: url("../media/background/mesh_edit.png");
   // background-blend-mode: lighten;
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
-main::after {
+main:after {
   position: absolute;
   content: "";
   width: 100vw;
@@ -277,8 +277,8 @@ main::after {
 }
 
 @media screen and (max-width: 800px) {
-  main::before,
-  main::after {
+  main:before,
+  main:after {
     background-size: 50px 50px;
   }
 }
@@ -1058,6 +1058,10 @@ p.gen-detail.text,
       margin-bottom: 20rem;
     }
   }
+}
+
+#last-edu-entry {
+  max-width: 24ch;
 }
 
 //**************************************************************experience section
