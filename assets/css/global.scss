@@ -308,7 +308,7 @@ header {
 .nav-link {
   width: fit-content;
   margin-left: auto;
-  margin-top: 0.8rem;
+  margin-top: 0.5rem;
   text-align: right;
   transition: all calc(6 * var(--nav-anim-dur) - 5 * (var(--nav-anim-dur) - var(--nav-anim-delay)))
     ease-out;
@@ -318,14 +318,14 @@ header {
     font-size: 0.9rem;
     color: var(--clr-ff-400);
     letter-spacing: 2px;
-    line-height: 1em;
+    // line-height: 1em;
   }
 
   .nav-number {
     font-size: 0.9rem;
     color: var(--clr-acc-400);
     margin-right: 0.3rem;
-    line-height: 1em;
+    // line-height: 1em;
   }
 
   .nav-a-replace {
@@ -344,6 +344,7 @@ header {
   display: inline-block;
   position: absolute;
   transform: translateX(100%);
+  height: auto;
 }
 .nav-reveal-wrapper {
   display: inline-block;
@@ -373,7 +374,7 @@ header {
 
 @media screen and (min-width: 1000px) {
   .nav-link {
-    margin-top: 0.9rem;
+    margin-top: 0.7rem;
     .nav-text,
     .nav-reveal {
       font-size: 1.2rem;
