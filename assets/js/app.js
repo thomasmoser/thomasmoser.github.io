@@ -3,7 +3,6 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 import { CustomEase } from "gsap/CustomEase";
-import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 //init smooth scroll
@@ -108,8 +107,8 @@ let split = function (toSplit) {
 split("#hero-header");
 split(".abstract-text");
 split(".tl-header");
-split(".exp-point-header");
-split(".exp-point-container .gen-detail");
+split(".pt-header .exp-point-header");
+// split(".pt-header-subheader .gen-subheader");
 split(".project-header");
 split(".project-info .gen-detail");
 split("#section-contact .quote-text");
@@ -249,7 +248,7 @@ tl_edu_desc
     { opacity: 0.01 },
     {
       opacity: 1,
-      duration: 1.5,
+      duration: 2.5,
     }
   )
   .fromTo(
@@ -283,25 +282,37 @@ tl_edu_desc
     "<+=0.1"
   );
 
-gsap.fromTo(
-  "#section-edu .wtm-category",
-  { xPercent: 0 },
-  {
-    scrollTrigger: {
-      trigger: "#section-edu .wtm-category",
-      scroller: scrollContainer,
-      start: () => {
-        if (window.innerHeight / window.innerWidth >= 1) {
-          return "top-=100 center";
-        }
-        return "top bottom-=100";
-      },
-      end: "bottom+=600 center",
-      scrub: 2,
-    },
-    xPercent: -20,
-  }
-);
+// gsap.fromTo(
+//   ".edu-wtm:nth-of-type(1)",
+//   { xPercent: 0 },
+//   { xPercent: -100, duration: 10, repeat: -1, repeatDelay: 2, ease: "none" }
+// );
+
+// gsap.fromTo(
+//   ".edu-wtm:nth-of-type(2)",
+//   { xPercent: 0 },
+//   { xPercent: -100, duration: 10, repeat: -1, ease: "none", delay: 5 }
+// );
+
+// gsap.fromTo(
+//   "#section-edu .wtm-category",
+//   { xPercent: 0 },
+//   {
+//     scrollTrigger: {
+//       trigger: "#section-edu .wtm-category",
+//       scroller: scrollContainer,
+//       start: () => {
+//         if (window.innerHeight / window.innerWidth >= 1) {
+//           return "top-=100 center";
+//         }
+//         return "top bottom-=100";
+//       },
+//       end: "bottom+=600 center",
+//       scrub: 2,
+//     },
+//     xPercent: -20,
+//   }
+// );
 
 //education section timeline
 gsap.fromTo(
@@ -337,6 +348,7 @@ let tl_edu_first = gsap.timeline({
         return "top bottom-=100";
       }
     },
+    toggleActions: "play none none reverse",
   },
 });
 
@@ -389,6 +401,7 @@ let tl_edu_second = gsap.timeline({
         return "top bottom-=100";
       }
     },
+    toggleActions: "play none none reverse",
   },
 });
 
@@ -444,6 +457,7 @@ let tl_edu_third = gsap.timeline({
     trigger: "#edu-tl-container .tl-point:nth-child(4)",
     scroller: scrollContainer,
     start: "top-=100 center",
+    toggleActions: "play none none reverse",
   },
 });
 
@@ -494,12 +508,9 @@ tl_edu_third
     "<+=0.8"
   );
 
-console.log(tl_edu_second.duration());
-console.log(tl_edu_third.duration());
-
 //Animation experiece section***********************************************************
-let exp_bg_delay = 0.5;
-let right_side_delay = 0.5;
+// let exp_bg_delay = 0.5;
+// let right_side_delay = 0.5;
 
 let tl_exp_desc = gsap.timeline({
   scrollTrigger: {
@@ -544,6 +555,17 @@ tl_exp_desc
       duration: 1,
     },
     "<+=0.1"
+  )
+  .fromTo(
+    "#exp-middle-seperator",
+    { scaleY: 0, opacity: 0 },
+    {
+      opacity: 1,
+      scaleY: 1,
+      duration: 2,
+      delay: 0.3,
+    },
+    "<"
   );
 
 gsap.fromTo(
@@ -567,31 +589,31 @@ gsap.fromTo(
   }
 );
 
-gsap.fromTo(
-  "#section-exp .wtm-category",
-  { xPercent: 0 },
-  {
-    scrollTrigger: {
-      trigger: "#section-exp .wtm-category",
-      scroller: scrollContainer,
-      start: () => {
-        if (window.innerHeight / window.innerWidth >= 1) {
-          return "top-=100 center";
-        } else {
-          return "top bottom-=100";
-        }
-      },
-      end: "bottom+=600 center",
-      scrub: 2,
-    },
-    xPercent: -20,
-  }
-);
+// gsap.fromTo(
+//   "#section-exp .wtm-category",
+//   { xPercent: 0 },
+//   {
+//     scrollTrigger: {
+//       trigger: "#section-exp .wtm-category",
+//       scroller: scrollContainer,
+//       start: () => {
+//         if (window.innerHeight / window.innerWidth >= 1) {
+//           return "top-=100 center";
+//         } else {
+//           return "top bottom-=100";
+//         }
+//       },
+//       end: "bottom+=600 center",
+//       scrub: 2,
+//     },
+//     xPercent: -20,
+//   }
+// );
 
-//experience section first point header***********
-let tl_exp_first = gsap.timeline({
+//experience section first point***********
+let tl_exp_first_intro = gsap.timeline({
   scrollTrigger: {
-    trigger: "#exp-points .exp-point:nth-child(1)",
+    trigger: ".first-tbl .pt-intro",
     scroller: scrollContainer,
     start: () => {
       if (window.innerHeight / window.innerWidth >= 1) {
@@ -600,82 +622,132 @@ let tl_exp_first = gsap.timeline({
         return "top bottom-=100";
       }
     },
+    toggleActions: "play none none reverse",
   },
 });
 
-tl_exp_first.fromTo(
-  ".exp-point:nth-child(1) .exp-point-general .rev",
-  { yPercent: 100, opacity: 0 },
-  {
-    yPercent: 0,
-    opacity: 1,
-    duration: 1,
-    stagger: {
-      amount: 0.5,
-    },
-  },
-  "<"
-);
-
-tl_exp_first
+tl_exp_first_intro
   .fromTo(
-    "#exp-points .exp-point:nth-child(1) .exp-point-detail .exp-point-detail-separator",
-    { scaleY: 0 },
+    ".first-tbl .tbl-intro-bg",
+    { scaleX: 0, opacity: 0 },
     {
-      scaleY: 1,
-      duration: 2.5,
+      scaleX: 1,
+      opacity: 1,
+      duration: 1.5,
     },
     "<"
   )
   .fromTo(
-    "#exp-points .exp-point:nth-child(1) .exp-point-detail .exp-point-container:nth-child(1) .rev",
-    { opacity: 0, yPercent: 100 },
+    ".first-tbl .tbl-intro.rev",
+    { yPercent: 100 },
     {
-      opacity: 1,
       yPercent: 0,
       duration: 1,
-      stagger: {
-        amount: 1,
-      },
     },
     "<"
-  )
-  .fromTo(
-    "#exp-points .exp-point:nth-child(1) .exp-point-detail .exp-point-container:nth-child(1) .exp-point-header-bg",
-    { scaleX: 0 },
-    {
-      scaleX: 1,
-      duration: 1.5,
-    },
-    `<+=${exp_bg_delay}`
-  )
-  .fromTo(
-    "#exp-points .exp-point:nth-child(1) .exp-point-detail .exp-point-container:nth-child(3) .rev",
-    { opacity: 0, yPercent: 100 },
-    {
-      opacity: 1,
-      yPercent: 0,
-      duration: 1,
-      stagger: {
-        amount: 1,
-      },
-    },
-    `<+=${right_side_delay}`
-  )
-  .fromTo(
-    "#exp-points .exp-point:nth-child(1) .exp-point-detail .exp-point-container:nth-child(3) .exp-point-header-bg",
-    { scaleX: 0 },
-    {
-      scaleX: 1,
-      duration: 1.5,
-    },
-    `<+=${exp_bg_delay}`
   );
 
-//experience section second point header***********
-let tl_exp_second = gsap.timeline({
+let tl_exp_first_header = gsap.timeline({
   scrollTrigger: {
-    trigger: "#exp-points .exp-point:nth-child(2)",
+    trigger: ".first-tbl .pt-header",
+    scroller: scrollContainer,
+    start: () => {
+      if (window.innerHeight / window.innerWidth >= 1) {
+        return "top-=100 center";
+      } else {
+        return "center-=200 center";
+      }
+    },
+    toggleActions: "play none none reverse",
+  },
+});
+
+tl_exp_first_header
+  .fromTo(
+    ".first-tbl .pt-header  .exp-point-header .rev",
+    { opacity: 0, yPercent: 100 },
+    {
+      opacity: 1,
+      yPercent: 0,
+      duration: 1,
+      stagger: {
+        amount: 0.2,
+      },
+    },
+    "<"
+  )
+  .fromTo(
+    ".first-tbl .pt-header-subheader .gen-subheader",
+    { opacity: 0, yPercent: 100 },
+    {
+      opacity: 1,
+      yPercent: 0,
+      duration: 0.8,
+      stagger: {
+        amount: 0.2,
+      },
+    },
+    "<+=0.3"
+  )
+  .fromTo(
+    ".first-tbl .pt-header .right-half .tbl-misc",
+    { opacity: 0 },
+    {
+      opacity: 1,
+      duration: 0.8,
+      stagger: {
+        amount: 0.4,
+      },
+    },
+    "<+=0.6"
+  );
+
+let tl_exp_first_detail = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".first-tbl #pt-detail-first",
+    scroller: scrollContainer,
+    start: () => {
+      if (window.innerHeight / window.innerWidth >= 1) {
+        return "top-=100 center";
+      } else {
+        return "center-=100 center";
+      }
+    },
+    toggleActions: "play none none reverse",
+  },
+});
+
+tl_exp_first_detail
+  .fromTo(
+    ".first-tbl .pt-detail",
+    { opacity: 0 },
+    {
+      opacity: 1,
+      duration: 2,
+      stagger: {
+        amount: 1,
+      },
+    },
+    "<"
+  )
+  .fromTo(
+    ".first-tbl .tbl-pt-detail-sep",
+    { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)", opacity: 0 },
+    {
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+      opacity: 1,
+      duration: 1,
+      stagger: {
+        amount: 1,
+      },
+    },
+    "<+=0.1"
+  );
+
+//experience section second point***********
+let tl_exp_second_intro = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".second-tbl .pt-intro",
     scroller: scrollContainer,
     start: () => {
       if (window.innerHeight / window.innerWidth >= 1) {
@@ -684,49 +756,108 @@ let tl_exp_second = gsap.timeline({
         return "top bottom-=100";
       }
     },
+    toggleActions: "play none none reverse",
   },
 });
 
-tl_exp_second.fromTo(
-  ".exp-point:nth-child(2) .exp-point-general .rev",
-  { yPercent: 100, opacity: 0 },
-  {
-    yPercent: 0,
-    opacity: 1,
-    duration: 1,
-    stagger: {
-      amount: 0.5,
+tl_exp_second_intro
+  .fromTo(
+    ".second-tbl .tbl-intro-bg",
+    { scaleX: 0, opacity: 0 },
+    {
+      scaleX: 1,
+      opacity: 1,
+      duration: 1.5,
     },
+    "<"
+  )
+  .fromTo(
+    ".second-tbl .tbl-intro.rev",
+    { yPercent: 100 },
+    {
+      yPercent: 0,
+      duration: 1,
+    },
+    "<"
+  );
+
+let tl_exp_second_header = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".second-tbl .pt-header",
+    scroller: scrollContainer,
+    start: () => {
+      if (window.innerHeight / window.innerWidth >= 1) {
+        return "top-=100 center";
+      } else {
+        return "center-=200 center";
+      }
+    },
+    toggleActions: "play none none reverse",
   },
-  "<"
-);
-//experience section second point detail***********
-// let tl_exp_second_detail = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: "#exp-points .exp-point:nth-child(2) .exp-point-detail",
-//     scroller: scrollContainer,
-//     start: "top center",
-//   },
-// });
+});
 
-tl_exp_second
+tl_exp_second_header
   .fromTo(
-    "#exp-points .exp-point:nth-child(2) .exp-point-detail .exp-point-detail-separator",
-    { scaleY: 0 },
-    {
-      scaleY: 1,
-      duration: 2.5,
-    },
-    "<"
-  )
-
-  .fromTo(
-    "#exp-points .exp-point:nth-child(2) .exp-point-detail .exp-point-container:nth-child(1) .rev",
+    ".second-tbl .pt-header  .exp-point-header .rev",
     { opacity: 0, yPercent: 100 },
     {
       opacity: 1,
       yPercent: 0,
       duration: 1,
+      stagger: {
+        amount: 0.2,
+      },
+    },
+    "<"
+  )
+  .fromTo(
+    ".second-tbl .pt-header-subheader .gen-subheader",
+    { opacity: 0, yPercent: 100 },
+    {
+      opacity: 1,
+      yPercent: 0,
+      duration: 0.8,
+      stagger: {
+        amount: 0.2,
+      },
+    },
+    "<+=0.3"
+  )
+  .fromTo(
+    ".second-tbl .pt-header .right-half .tbl-misc",
+    { opacity: 0 },
+    {
+      opacity: 1,
+      duration: 0.8,
+      stagger: {
+        amount: 0.4,
+      },
+    },
+    "<+=0.6"
+  );
+
+let tl_exp_second_detail = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".second-tbl #pt-detail-first",
+    scroller: scrollContainer,
+    start: () => {
+      if (window.innerHeight / window.innerWidth >= 1) {
+        return "top-=100 center";
+      } else {
+        return "center-=100 center";
+      }
+    },
+    toggleActions: "play none none reverse",
+  },
+});
+
+tl_exp_second_detail
+  .fromTo(
+    ".second-tbl .pt-detail",
+    { opacity: 0 },
+    {
+      opacity: 1,
+      duration: 2,
       stagger: {
         amount: 1,
       },
@@ -734,35 +865,17 @@ tl_exp_second
     "<"
   )
   .fromTo(
-    "#exp-points .exp-point:nth-child(2) .exp-point-detail .exp-point-container:nth-child(1) .exp-point-header-bg",
-    { scaleX: 0 },
+    ".second-tbl .tbl-pt-detail-sep",
+    { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)", opacity: 0 },
     {
-      scaleX: 1,
-      duration: 1.5,
-    },
-    `<+=${exp_bg_delay}`
-  )
-  .fromTo(
-    "#exp-points .exp-point:nth-child(2) .exp-point-detail .exp-point-container:nth-child(3) .rev",
-    { opacity: 0, yPercent: 100 },
-    {
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       opacity: 1,
-      yPercent: 0,
       duration: 1,
       stagger: {
         amount: 1,
       },
     },
-    `<+=${right_side_delay}`
-  )
-  .fromTo(
-    "#exp-points .exp-point:nth-child(2) .exp-point-detail .exp-point-container:nth-child(3) .exp-point-header-bg",
-    { scaleX: 0 },
-    {
-      scaleX: 1,
-      duration: 1.5,
-    },
-    `<+=${exp_bg_delay}`
+    "<+=0.1"
   );
 
 //Animation project section***********************************************************
@@ -868,6 +981,7 @@ let tl_pro_first = gsap.timeline({
         return "top bottom-=100";
       }
     },
+    toggleActions: "play none none reverse",
   },
 });
 
@@ -981,6 +1095,7 @@ let tl_pro_second = gsap.timeline({
         return "top bottom-=100";
       }
     },
+    toggleActions: "play none none reverse",
   },
 });
 
@@ -1141,6 +1256,7 @@ let tl_contact = gsap.timeline({
         return "top bottom-=100";
       }
     },
+    toggleActions: "play none none reverse",
   },
 });
 
@@ -1186,17 +1302,176 @@ tl_contact
     "<+=0.2"
   );
 
-// gsap.fromTo(
-//   "h3",
-//   { opacity: 0 },
-//   {
-//     scrollTrigger: {
-//       trigger: ".comp-header.hero.abstract",
-//       scroller: scrollContainer,
-//       markers: true,
-//       start: "top center",
-//     },
-//     opacity: 1,
-//     duration: 1,
-//   }
-// );
+//Education Section
+let prevScrollEdu = 0;
+let scrollDirectionEdu = 1;
+let EduPosition = document.querySelector(".wtm-marquee.wtm-edu").getBoundingClientRect().top;
+let loopsEdu;
+let initEdu = 0;
+
+scroll.on("scroll", () => {
+  let direction;
+  let nextScroll = scroll.scroll.instance.scroll.y;
+  if (scrollDirectionEdu == 1) {
+    direction = Math.floor(nextScroll) >= Math.floor(prevScrollEdu) ? 1 : -1;
+  } else {
+    direction = Math.ceil(nextScroll) <= Math.ceil(prevScrollEdu) ? -1 : 1;
+  }
+
+  if (nextScroll + window.innerHeight >= EduPosition) {
+    if (initEdu == 0) {
+      loopsEdu = gsap.utils.toArray(".wtm-single.wtm-edu").map((line, i) => {
+        const links = line.querySelectorAll(".wtm-edu.js-text");
+        const speed = window.innerWidth > 800 ? 1 + i * 0.5 : 0.5 + i * 0.5;
+        initEdu = 1;
+        return horizontalLoop(links, {
+          repeat: -1,
+          speed: speed,
+          reversed: false,
+          paddingRight: parseFloat(gsap.getProperty(links[0], "marginRight", "px")),
+        });
+      });
+    }
+    if (direction !== scrollDirectionEdu && nextScroll + window.innerHeight >= EduPosition) {
+      try {
+        loopsEdu.forEach((tl) => gsap.to(tl, { timeScale: direction, overwrite: true }));
+        scrollDirectionEdu = direction;
+      } catch {
+        console.log("no looped elements found");
+      }
+    }
+  }
+  prevScrollEdu = nextScroll;
+});
+
+//Experience Section
+let prevScrollExp = 0;
+let scrollDirectionExp = 1;
+let ExpPosition = document.querySelector(".wtm-marquee.wtm-exp").getBoundingClientRect().top;
+let loopsExp;
+let initExp = 0;
+
+scroll.on("scroll", () => {
+  let direction;
+  let nextScroll = scroll.scroll.instance.scroll.y;
+  if (scrollDirectionExp == 1) {
+    direction = Math.floor(nextScroll) >= Math.floor(prevScrollExp) ? 1 : -1;
+  } else {
+    direction = Math.ceil(nextScroll) <= Math.ceil(prevScrollExp) ? -1 : 1;
+  }
+
+  if (nextScroll + window.innerHeight >= ExpPosition) {
+    if (initExp == 0) {
+      loopsExp = gsap.utils.toArray(".wtm-single.wtm-exp").map((line, i) => {
+        const links = line.querySelectorAll(".wtm-exp.js-text");
+        const speed = window.innerWidth > 800 ? 1 + i * 0.5 : 0.5 + i * 0.5;
+        initExp = 1;
+        return horizontalLoop(links, {
+          repeat: -1,
+          speed: speed,
+          reversed: false,
+          paddingRight: parseFloat(gsap.getProperty(links[0], "marginRight", "px")),
+        });
+      });
+    }
+    if (direction !== scrollDirectionExp && nextScroll + window.innerHeight >= ExpPosition) {
+      try {
+        loopsExp.forEach((tl) => gsap.to(tl, { timeScale: direction, overwrite: true }));
+        scrollDirectionExp = direction;
+      } catch {
+        console.log("no looped elements found");
+      }
+    }
+  }
+  prevScrollExp = nextScroll;
+});
+
+function horizontalLoop(items, config) {
+  items = gsap.utils.toArray(items);
+  config = config || {};
+  let tl = gsap.timeline({
+      repeat: config.repeat,
+      paused: config.paused,
+      defaults: { ease: "none" },
+      onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100),
+    }),
+    length = items.length,
+    startX = items[0].offsetLeft,
+    times = [],
+    widths = [],
+    xPercents = [],
+    curIndex = 0,
+    pixelsPerSecond = (config.speed || 1) * 100,
+    snap = config.snap === false ? (v) => v : gsap.utils.snap(config.snap || 1),
+    totalWidth,
+    curX,
+    distanceToStart,
+    distanceToLoop,
+    item,
+    i;
+  gsap.set(items, {
+    xPercent: (i, el) => {
+      let w = (widths[i] = parseFloat(gsap.getProperty(el, "width", "px")));
+      xPercents[i] = snap(
+        (parseFloat(gsap.getProperty(el, "x", "px")) / w) * 100 + gsap.getProperty(el, "xPercent")
+      );
+      return xPercents[i];
+    },
+  });
+  gsap.set(items, { x: 0 });
+  totalWidth =
+    items[length - 1].offsetLeft +
+    (xPercents[length - 1] / 100) * widths[length - 1] -
+    startX +
+    items[length - 1].offsetWidth * gsap.getProperty(items[length - 1], "scaleX") +
+    (parseFloat(config.paddingRight) || 0);
+  for (i = 0; i < length; i++) {
+    item = items[i];
+    curX = (xPercents[i] / 100) * widths[i];
+    distanceToStart = item.offsetLeft + curX - startX;
+    distanceToLoop = distanceToStart + widths[i] * gsap.getProperty(item, "scaleX");
+    tl.to(
+      item,
+      {
+        xPercent: snap(((curX - distanceToLoop) / widths[i]) * 100),
+        duration: distanceToLoop / pixelsPerSecond,
+      },
+      0
+    )
+      .fromTo(
+        item,
+        { xPercent: snap(((curX - distanceToLoop + totalWidth) / widths[i]) * 100) },
+        {
+          xPercent: xPercents[i],
+          duration: (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond,
+          immediateRender: false,
+        },
+        distanceToLoop / pixelsPerSecond
+      )
+      .add("label" + i, distanceToStart / pixelsPerSecond);
+    times[i] = distanceToStart / pixelsPerSecond;
+  }
+  function toIndex(index, vars) {
+    vars = vars || {};
+    Math.abs(index - curIndex) > length / 2 && (index += index > curIndex ? -length : length); // always go in the shortest direction
+    let newIndex = gsap.utils.wrap(0, length, index),
+      time = times[newIndex];
+    if (time > tl.time() !== index > curIndex) {
+      vars.modifiers = { time: gsap.utils.wrap(0, tl.duration()) };
+      time += tl.duration() * (index > curIndex ? 1 : -1);
+    }
+    curIndex = newIndex;
+    vars.overwrite = true;
+    return tl.tweenTo(time, vars);
+  }
+  tl.next = (vars) => toIndex(curIndex + 1, vars);
+  tl.previous = (vars) => toIndex(curIndex - 1, vars);
+  tl.current = () => curIndex;
+  tl.toIndex = (index, vars) => toIndex(index, vars);
+  tl.times = times;
+  if (config.reversed) {
+    tl.vars.onReverseComplete();
+    tl.reverse();
+  }
+  return tl;
+}
