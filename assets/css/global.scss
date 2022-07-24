@@ -578,7 +578,7 @@ p.gen-detail.text,
 
 :root {
   --wtm-edu-left-indent: 500px;
-  --wtm-exp-left-indent: 550px;
+  --wtm-exp-left-indent: 500px;
 }
 
 .wtm-marquee {
@@ -1184,6 +1184,27 @@ p.gen-detail.text,
 }
 
 //pt-header
+
+:root {
+  --exp-header-border: 2px;
+}
+
+.pt-header .left-half {
+  position: relative;
+
+  padding-left: calc(var(--exp-pd-to-icon) + var(--exp-icon-width-s) - var(--exp-header-border));
+}
+
+.pt-header-border-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: var(--exp-header-border);
+  background: var(--clr-acc-400);
+  transform-origin: top;
+}
+
 .pt-header-subheader {
   margin-top: 0.6em;
 }
@@ -1192,6 +1213,13 @@ p.gen-detail.text,
 #section-exp .gen-subheader span {
   font-size: 1.125rem;
   width: fit-content;
+}
+
+@media screen and (max-width: 323px) {
+  #section-exp .gen-subheader,
+  #section-exp .gen-subheader span {
+    font-size: 1rem;
+  }
 }
 
 .tbl-place,
@@ -1276,6 +1304,7 @@ p.gen-detail.text,
 @media screen and (min-width: 480px) {
   :root {
     --exp-icon-width-m: 30px;
+    --exp-header-border: 3px;
   }
 
   // #database-icon {
@@ -1430,6 +1459,13 @@ p.gen-detail.text,
     padding: 60px 0;
     border-top: 1px var(--clr-acc-500a) solid;
     border-bottom: 1px var(--clr-acc-500a) solid;
+
+    .left-half {
+      padding-left: 0;
+    }
+    .pt-header-border-left {
+      display: none;
+    }
 
     h3 {
       text-align: right;

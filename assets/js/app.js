@@ -677,6 +677,17 @@ tl_exp_first_header
     "<"
   )
   .fromTo(
+    ".first-tbl .pt-header  .pt-header-border-left",
+    { scaleY: 0, opacity: 0 },
+    {
+      scaleY: 1,
+      opacity: 1,
+      duration: 1,
+      delay: 0.1,
+    },
+    "<"
+  )
+  .fromTo(
     ".first-tbl .pt-header-subheader .gen-subheader",
     { opacity: 0, yPercent: 100 },
     {
@@ -807,6 +818,17 @@ tl_exp_second_header
       stagger: {
         amount: 0.2,
       },
+    },
+    "<"
+  )
+  .fromTo(
+    ".second-tbl .pt-header  .pt-header-border-left",
+    { scaleY: 0, opacity: 0 },
+    {
+      scaleY: 1,
+      opacity: 1,
+      duration: 1,
+      delay: 0.1,
     },
     "<"
   )
