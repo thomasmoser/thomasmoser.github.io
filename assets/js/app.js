@@ -42,7 +42,7 @@ let nav_contact = document.querySelector("#nav-contact");
 
 nav_bio.addEventListener("click", (event) => {
   event.preventDefault();
-  if (window.innerWidth <= 800) {
+  if (window.innerWidth < 800) {
     setTimeout(() => {
       scroll.scrollTo(document.querySelector("#section-edu"));
     }, 600);
@@ -53,7 +53,7 @@ nav_bio.addEventListener("click", (event) => {
 
 nav_contact.addEventListener("click", (event) => {
   event.preventDefault();
-  if (window.innerWidth <= 800) {
+  if (window.innerWidth < 800) {
     setTimeout(() => {
       scroll.scrollTo(document.querySelector("#section-contact"));
     }, 600);
