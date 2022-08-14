@@ -268,6 +268,7 @@ tl_edu_desc
     { opacity: 0 },
     {
       opacity: 1,
+
       duration: 1,
     },
     "<"
@@ -707,7 +708,7 @@ tl_exp_first_header
       opacity: 1,
       duration: 0.8,
       stagger: {
-        amount: 0.4,
+        amount: 0.25,
       },
     },
     "<+=0.6"
@@ -731,12 +732,14 @@ let tl_exp_first_detail = gsap.timeline({
 tl_exp_first_detail
   .fromTo(
     ".first-tbl .pt-detail",
-    { opacity: 0 },
+    { opacity: 0, x: -10 },
     {
       opacity: 1,
-      duration: 2,
+      x: 0,
+      duration: 1.5,
       stagger: {
-        amount: 1,
+        amount: 0.7,
+        ease: "none",
       },
     },
     "<"
@@ -747,12 +750,12 @@ tl_exp_first_detail
     {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       opacity: 1,
-      duration: 1,
+      duration: 1.5,
       stagger: {
-        amount: 1,
+        amount: 0.5,
       },
     },
-    "<+=0.1"
+    "<"
   );
 
 //experience section second point***********
@@ -852,7 +855,7 @@ tl_exp_second_header
       opacity: 1,
       duration: 0.8,
       stagger: {
-        amount: 0.4,
+        amount: 0.25,
       },
     },
     "<+=0.6"
@@ -876,12 +879,14 @@ let tl_exp_second_detail = gsap.timeline({
 tl_exp_second_detail
   .fromTo(
     ".second-tbl .pt-detail",
-    { opacity: 0 },
+    { opacity: 0, x: -10 },
     {
       opacity: 1,
-      duration: 2,
+      x: 0,
+      duration: 1.5,
       stagger: {
-        amount: 1,
+        amount: 0.7,
+        ease: "none",
       },
     },
     "<"
@@ -892,12 +897,12 @@ tl_exp_second_detail
     {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       opacity: 1,
-      duration: 1,
+      duration: 1.5,
       stagger: {
-        amount: 1,
+        amount: 0.5,
       },
     },
-    "<+=0.1"
+    "<"
   );
 
 //Animation project section***********************************************************

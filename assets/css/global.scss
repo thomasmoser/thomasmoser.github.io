@@ -313,6 +313,7 @@ header {
   text-align: right;
   transition: all calc(6 * var(--nav-anim-dur) - 5 * (var(--nav-anim-dur) - var(--nav-anim-delay)))
     ease-out;
+
   .nav-text,
   .nav-reveal {
     text-transform: uppercase;
@@ -362,13 +363,13 @@ header {
 .nav-link:hover > .nav-a-replace > .nav-reveal-container > .nav-reveal-wrapper .nav-reveal {
   transform: translateY(0%);
   //opacity: 1;
-  transition: all var(--nav-anim-dur) ease-out calc(var(--nav-anim-delay) * var(--index));
+  transition: all var(--nav-anim-dur) ease-out calc((var(--nav-anim-delay)) * var(--index) + 0.2s);
 }
 
 .nav-link:hover {
   transform: translateX(-5%);
-  transition: all calc(6 * var(--nav-anim-dur) - 5 * (var(--nav-anim-dur) - var(--nav-anim-delay)))
-    ease-out;
+  transition: all
+    calc(6 * var(--nav-anim-dur) - 5 * ((var(--nav-anim-dur)) - var(--nav-anim-delay))) ease-out;
 }
 
 @media screen and (min-width: 1000px) {
@@ -463,13 +464,13 @@ p.gen-detail.text,
     }
     .gen-subheader,
     .gen-subheader span {
-      font-size: Min(calc(16px + (100vw - 650px) * 0.012), 22px);
+      font-size: Min(calc(16px + (100vw - 650px) * 0.012), 20px);
     }
   }
 
   p.gen-detail.text,
   .gen-detail span.rev {
-    font-size: Min(calc(18px + (100vw - 650px) * 0.012), 22px);
+    font-size: Min(calc(18px + (100vw - 650px) * 0.012), 20px);
   }
 }
 
@@ -1249,7 +1250,7 @@ p.gen-detail.text,
 }
 
 .tbl-header-info {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 2rem;
   letter-spacing: 1px;
   padding-left: var(--exp-pd-to-icon);
@@ -1306,24 +1307,6 @@ p.gen-detail.text,
     --exp-icon-width-m: 30px;
     --exp-header-border: 3px;
   }
-
-  // #database-icon {
-  // }
-
-  // #data-analysis-icon {
-  // }
-
-  // #research-icon {
-  // }
-
-  // #business-analysis-icon {
-  // }
-
-  // #test-icon {
-  // }
-
-  // #kpi-icon {
-  // }
 
   #section-exp {
     .gen-subheader,
@@ -1582,150 +1565,6 @@ p.gen-detail.text,
   }
 }
 
-// #exp-points {
-//   width: fit-content;
-//   margin-right: auto;
-// }
-// .exp-point-container {
-//   margin-top: 3rem;
-//   height: fit-content;
-//   font-size: 1.5rem;
-// }
-
-// #section-exp {
-//   h3,
-//   h3 span {
-//     width: fit-content;
-//     font-size: Min(7.5vw, 40px);
-//   }
-
-//   .gen-subheader,
-//   .gen-subheader span {
-//     font-size: 1.125rem;
-
-//     width: fit-content;
-//   }
-// }
-
-// .exp-point {
-//   width: fit-content;
-//   margin-right: auto;
-// }
-
-// .exp-point-general {
-//   width: fit-content;
-//   .gen-subheader:first-of-type {
-//     margin-top: 0.5rem;
-//   }
-// }
-
-// #research {
-//   margin-top: 0rem;
-// }
-
-// #cons {
-//   margin-top: 10rem;
-// }
-
-// .exp-point-header-container {
-//   position: relative;
-//   margin-bottom: -1.2rem;
-
-//   .exp-point-header-bg {
-//     position: absolute;
-//     background: var(--clr-acc-500a);
-//     width: 70%;
-//     height: 95%;
-//     margin-left: -8px;
-//     z-index: -1;
-//     transform-origin: left;
-//     will-change: transform;
-//   }
-//   .exp-question {
-//     position: relative;
-//     margin-left: 1.35rem;
-//     font-size: 3rem;
-//     top: 0;
-//     padding-top: 2px;
-//     font-weight: 600;
-//     color: var(--clr-bg-400);
-//     text-transform: uppercase;
-//     vertical-align: middle;
-//   }
-// }
-
-// .exp-point-detail {
-//   margin-top: 1.75rem;
-// }
-
-// @media screen and (max-width: 360px) {
-//   .exp-point-header-bg {
-//     width: 80%;
-//   }
-// }
-
-// @media screen and (min-width: 450px) {
-//   #exp-points {
-//     margin-left: auto;
-//     margin-right: auto;
-//   }
-
-//   .exp-point-container {
-//     max-width: 30ch;
-//   }
-// }
-
-// @media screen and (min-width: 650px) {
-//   #research {
-//     margin-top: Min(calc((100vw - 650px) * 0.1), 350px);
-//   }
-
-//   #cons {
-//     margin-top: Min(19.61vw, 220px);
-//   }
-
-//   #section-exp {
-//     .gen-subheader,
-//     .gen-subheader span {
-//       font-size: Min(calc(18px + (100vw - 650px) * 0.012), 22px);
-//     }
-//   }
-// }
-
-// @media screen and (min-width: 800px) {
-//   .exp-point-container {
-//     font-size: 1.875rem;
-//   }
-// }
-
-// @media screen and (min-width: 1200px) {
-//   #exp-points {
-//     width: 100%;
-//     max-width: 1150px;
-//     margin-right: auto;
-//   }
-
-//   .exp-point-container {
-//     margin-top: 0;
-//     text-align: justify;
-//     font-size: 1rem;
-//     max-width: 60ch;
-//   }
-
-//   .exp-point {
-//     width: auto;
-//   }
-
-//   .exp-point-detail {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     align-items: center;
-//     height: fit-content;
-//     margin-top: 2.5rem;
-//   }
-// }
-
 //************************************************************projects section
 :root {
   --img-width: 150px;
@@ -1839,7 +1678,7 @@ p.gen-detail.text,
 
 @media screen and (min-width: 650px) {
   .project-detail-container {
-    font-size: Min(calc(18px + (100vw - 650px) * 0.012), 22px);
+    font-size: Min(calc(18px + (100vw - 650px) * 0.012), 20px);
   }
 }
 
@@ -1978,7 +1817,7 @@ p.gen-detail.text,
   display: flex;
   align-items: center;
   margin-top: 1.5rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   width: fit-content;
   will-change: opacity;
 }
@@ -1988,7 +1827,7 @@ p.gen-detail.text,
   margin-right: 10px;
   margin-top: -2px;
   svg {
-    height: 16px;
+    height: 10px;
     fill: var(--clr-acc-400);
   }
 }
@@ -2004,6 +1843,7 @@ p.gen-detail.text,
     font-size: 0.8rem;
   }
 }
+
 .project-info-links {
   display: flex;
   width: fit-content;
@@ -2015,14 +1855,14 @@ p.gen-detail.text,
   display: flex;
 
   svg {
-    height: 30px;
+    height: 25px;
     fill: var(--clr-acc-400);
     transition: 0.5s ease-out;
   }
 
   .link-svg {
     width: fit-content;
-    height: 28px;
+    height: 24px;
   }
 }
 
@@ -2070,15 +1910,12 @@ p.gen-detail.text,
   .project-info {
     font-size: Min(3.7vw, 40px);
   }
-  .code-text {
-    font-size: Min(1.72vw, 16px);
-  }
 }
 
 @media screen and (min-width: 800px) {
   .project-info-code {
     margin-top: 2rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 2rem;
   }
 
   .code-circle {
@@ -2086,19 +1923,28 @@ p.gen-detail.text,
     height: 5px;
     margin: auto 1rem;
   }
+  .code-icon {
+    margin-right: 1rem;
 
+    svg {
+      height: 14px;
+    }
+  }
+  .code-text {
+    font-size: 16px;
+  }
   .project-info-links {
-    gap: 25px;
+    gap: 20px;
   }
 
   .project-info-link {
     svg {
-      height: 35px;
+      height: 30px;
     }
 
-    // .link-svg {
-    //   height: 38px;
-    // }
+    .link-svg {
+      height: 28px;
+    }
   }
 }
 
