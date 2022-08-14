@@ -736,9 +736,9 @@ tl_exp_first_detail
     {
       opacity: 1,
       x: 0,
-      duration: 1.5,
+      duration: 1,
       stagger: {
-        amount: 0.7,
+        amount: 0.5,
         ease: "none",
       },
     },
@@ -750,9 +750,10 @@ tl_exp_first_detail
     {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       opacity: 1,
-      duration: 1.5,
+      duration: 1,
       stagger: {
-        amount: 0.5,
+        each: 0.3,
+        ease: "none",
       },
     },
     "<"
@@ -883,9 +884,9 @@ tl_exp_second_detail
     {
       opacity: 1,
       x: 0,
-      duration: 1.5,
+      duration: 1,
       stagger: {
-        amount: 0.7,
+        amount: 0.5,
         ease: "none",
       },
     },
@@ -897,9 +898,10 @@ tl_exp_second_detail
     {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       opacity: 1,
-      duration: 1.5,
+      duration: 1,
       stagger: {
-        amount: 0.5,
+        each: 0.3,
+        ease: "none",
       },
     },
     "<"
