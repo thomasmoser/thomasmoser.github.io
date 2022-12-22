@@ -1136,28 +1136,41 @@ p.gen-detail.text,
 }
 
 //manual icon adjustment
-@media screen and (max-width: 1999px) {
+@media screen and (max-width: 1199px) {
+  .tbl-detail-header-icon-wrapper {
+    svg {
+      height: 50px;
+    }
+  }
   #database-icon {
-    top: -4px;
+    top: -15px;
   }
 
   #data-analysis-icon {
-    top: -6px;
+    top: -16px;
   }
   #research-icon {
-    top: -4px;
+    top: -14px;
   }
 
   #business-analysis-icon {
-    top: -4px;
+    top: -14px;
   }
 
   #test-icon {
-    top: -2px;
+    top: -14px;
   }
 
   #kpi-icon {
-    top: 0;
+    top: -12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .tbl-detail-header-icon-wrapper {
+    svg {
+      height: fit-content;
+    }
   }
 }
 
@@ -1288,7 +1301,6 @@ p.gen-detail.text,
     display: block;
     fill: var(--clr-acc-400);
     width: var(--exp-icon-width-m);
-    height: fit-content;
   }
 }
 
