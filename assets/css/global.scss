@@ -1136,20 +1136,30 @@ p.gen-detail.text,
 }
 
 //manual icon adjustment
-// #database-icon {
-//   top: 45%;
-// }
+@media screen and (max-width: 1999px) {
+  #database-icon {
+    top: -4px;
+  }
 
-// #data-analysis-icon {
-//   top: 20%;
-// }
-// #research-icon {
-//   top: 45%;
-// }
+  #data-analysis-icon {
+    top: -6px;
+  }
+  #research-icon {
+    top: -4px;
+  }
 
-// #business-analysis-icon {
-//   top: 40%;
-// }
+  #business-analysis-icon {
+    top: -4px;
+  }
+
+  #test-icon {
+    top: -2px;
+  }
+
+  #kpi-icon {
+    top: 0;
+  }
+}
 
 #test-icon {
   //top: 40%;
@@ -1158,9 +1168,6 @@ p.gen-detail.text,
   fill: var(--clr-bg-400);
 }
 
-// #kpi-icon {
-//   top: 50%;
-// }
 //pt-intro
 
 .exp-tbl {
@@ -1275,8 +1282,9 @@ p.gen-detail.text,
   width: var(--exp-icon-width-m);
   svg {
     position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
+    top: 0;
+    //transform: translateY(-50%);
+    //top: 50%;
     display: block;
     fill: var(--clr-acc-400);
     width: var(--exp-icon-width-m);
