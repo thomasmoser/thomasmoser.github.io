@@ -775,7 +775,8 @@ p.gen-detail.text,
 
   .wtm-bg.wtm-pro {
     width: 100vw;
-    left: calc(((100vw - 1280px) / 2) - var(--site-margin));
+    //left: calc(((100vw - 1280px) / 2) - var(--site-margin));
+    left: calc(-1 * var(--site-margin));
   }
 }
 
