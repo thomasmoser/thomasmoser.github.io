@@ -1419,11 +1419,11 @@ function horizontalLoop(items, config) {
   items = gsap.utils.toArray(items);
   config = config || {};
   let tl = gsap.timeline({
-      repeat: config.repeat,
-      paused: config.paused,
-      defaults: { ease: "none" },
-      onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100),
-    }),
+    repeat: config.repeat,
+    paused: config.paused,
+    defaults: { ease: "none" },
+    onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100),
+  }),
     length = items.length,
     startX = items[0].offsetLeft,
     times = [],
