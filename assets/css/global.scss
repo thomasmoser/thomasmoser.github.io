@@ -1954,8 +1954,8 @@ p.gen-detail.text,
   }
 
   .link-svg {
-    width: fit-content;
     height: 24px;
+    width: 24px;
   }
 }
 
@@ -2032,6 +2032,7 @@ p.gen-detail.text,
     }
 
     .link-svg {
+      width: 28px;
       height: 28px;
     }
   }
