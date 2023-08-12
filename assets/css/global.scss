@@ -1184,6 +1184,7 @@ p.gen-detail.text,
 //**************************************************************experience section
 :root {
   --exp-icon-width-s: 15px;
+  --exp-icon-height-s: 17px;
   --exp-icon-width-m: 25px;
   --exp-pd-to-icon: 0.8rem;
 }
@@ -1303,7 +1304,7 @@ p.gen-detail.text,
   width: fit-content;
 }
 
-@media screen and (max-width: 323px) {
+@media screen and (max-width: 346px) {
 
   #section-exp .gen-subheader,
   #section-exp .gen-subheader span {
@@ -1311,13 +1312,19 @@ p.gen-detail.text,
   }
 }
 
+.tbl-icon-wrapper {
+  height: var(--exp-icon-height-s);
+}
+
 .tbl-place,
-.tbl-time {
+.tbl-time,
+.tbl-prom {
   display: flex;
   flex-direction: row;
   align-items: center;
 
   svg {
+    height: var(--exp-icon-height-s);
     width: var(--exp-icon-width-s);
   }
 }
@@ -1327,15 +1334,23 @@ p.gen-detail.text,
   margin-left: -1px;
 
   svg {
-    margin-top: -2px;
+    margin-top: -7px;
   }
 }
 
 .tbl-time {
   svg {
-    margin-top: -4px;
+    margin-top: -6px;
   }
 }
+
+.tbl-prom {
+  svg {
+    margin-top: -3px;
+  }
+}
+
+
 
 .tbl-header-info {
   font-size: 1rem;
@@ -1562,11 +1577,8 @@ p.gen-detail.text,
     }
 
     .tbl-place,
-    .tbl-time {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-
+    .tbl-time,
+    .tbl-prom {
       svg {
         height: var(--exp-icon-height-s);
         width: var(--exp-icon-width-s);
@@ -1576,6 +1588,24 @@ p.gen-detail.text,
     .tbl-place {
       margin-top: 0;
       margin-bottom: 20px;
+
+      svg {
+        margin-top: -2px;
+      }
+    }
+
+    .tbl-time {
+      svg {
+        margin-top: -2px;
+      }
+    }
+
+    .tbl-prom {
+      margin-top: 20px;
+
+      svg {
+        margin-top: 0;
+      }
     }
 
     .tbl-header-info {

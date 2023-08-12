@@ -856,7 +856,7 @@ tl_exp_second_header
       opacity: 1,
       duration: 0.8,
       stagger: {
-        amount: 0.25,
+        amount: 0.375,
       },
     },
     "<+=0.6"
