@@ -1504,3 +1504,17 @@ function horizontalLoop(items, config) {
   }
   return tl;
 }
+
+
+
+function isSafari() {
+  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+}
+
+// Remove transitions if the browser is Safari
+if (isSafari()) {
+  var elements = document.querySelectorAll('svg, .github-text');
+  elements.forEach(function (element) {
+    element.style.transition = 'none';
+  });
+}
