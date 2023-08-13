@@ -14,6 +14,7 @@ module.exports = {
       directory: path.resolve(__dirname),
     },
   },
+  devtool: "source-map",
   module: {
     rules: [
       {
