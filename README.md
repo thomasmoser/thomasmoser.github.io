@@ -6,7 +6,7 @@ I like learning. I like creative projects. This page and its contents serve as a
 ## Technology:
 - **Design**: HTML, vanilla JavaScript, CSS ([Sass](https://sass-lang.com/))
 - **Animation**: [GSAP](https://greensock.com/gsap/)
-- **Scrolling**: [locomotive-scroll](https://github.com/locomotivemtl/locomotive-scroll)
+- **Scrolling**: [lenis-scroll](https://github.com/darkroomengineering/lenis)
 - **Package Manager**: [npm](https://www.npmjs.com/)
 - **Module Bundler**: [webpack](https://webpack.js.org/)
 - **Deployment & Hosting**: [GitHub Pages](https://pages.github.com/)

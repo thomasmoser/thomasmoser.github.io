@@ -1,21 +1,6 @@
-import LocomotiveScroll from "locomotive-scroll";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-
-import { CustomEase } from "gsap/CustomEase";
-gsap.registerPlugin(ScrollTrigger, CustomEase);
-
 import Lenis from '@studio-freight/lenis'
-
-//init smooth scroll
-// let scrollContainer = document.querySelector("[data-scroll-container]");
-// const scroll = new LocomotiveScroll({
-//     el: scrollContainer,
-//     smooth: false,
-//     lerp: 0.05,
-//     multiplier: 0.8,
-//     gestureDirection: "vertical",
-// });
 
 //GSAP
 gsap.registerPlugin(ScrollTrigger);
@@ -88,7 +73,9 @@ nav_bio.addEventListener("click", (event) => {
             scroll.scrollTo(document.querySelector("#section-edu"));
         }, 600);
     } else {
-        scroll.scrollTo(document.querySelector("#section-edu"));
+        scroll.scrollTo(document.querySelector("#section-edu"), {
+            lock: true
+        });
     }
 });
 
@@ -99,7 +86,9 @@ nav_contact.addEventListener("click", (event) => {
             scroll.scrollTo(document.querySelector("#section-contact"));
         }, 600);
     } else {
-        scroll.scrollTo(document.querySelector("#section-contact"));
+        scroll.scrollTo(document.querySelector("#section-contact"), {
+            lock: true
+        });
     }
 });
 
